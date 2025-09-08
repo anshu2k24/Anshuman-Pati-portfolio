@@ -1,6 +1,7 @@
-const mongoose = require('mongoose');
+// This Mongoose schema defines the structure for a suggestion.
 
-// Define the schema for a suggestion
+import mongoose from 'mongoose';
+
 const suggestionSchema = new mongoose.Schema({
     // The main suggestion text provided by the user
     suggested: {
@@ -22,7 +23,8 @@ const suggestionSchema = new mongoose.Schema({
     },
 });
 
-// Create the Mongoose model from the schema
-const Suggestion = mongoose.model('Suggestion', suggestionSchema);
+// Create the Mongoose model from the schema, or reuse it if it already exists
+// to prevent Mongoose from trying to overwrite the model in development.
+const Suggestion = mongoose.models.Suggestion || mongoose.model('Suggestion', suggestionSchema);
 
-module.exports = Suggestion;
+export default Suggestion;

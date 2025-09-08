@@ -1,8 +1,9 @@
-const nodemailer = require('nodemailer');
+// This service file handles sending emails using Nodemailer.
+// It is designed to be used with Next.js API Routes.
 
-const dotenv = require('dotenv');
-dotenv.config();
+import nodemailer from 'nodemailer';
 
+// Environment variables are automatically loaded by Next.js, no need for dotenv.
 const from_EMAIL_ADDRESS = process.env.from_EMAIL_ADDRESS;
 const from_EMAIL_PASSWORD = process.env.from_EMAIL_PASSWORD;
 const to_PORTFOLIO_EMAIL_ADDRESS = process.env.to_PORTFOLIO_EMAIL_ADDRESS;
@@ -15,12 +16,11 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-
 /**
  * Sends a notification email to the portfolio owner for a new contact form submission.
  * @param {Object} contactData - The data from the contact form submission.
  */
-const sendContactNotification = async (contactData) => {
+export const sendContactNotification = async (contactData) => {
     const { name, email, msg, mobile } = contactData;
     const mailOptions = {
         from: `Anshuman Pati <${from_EMAIL_ADDRESS}>`,
@@ -52,7 +52,7 @@ const sendContactNotification = async (contactData) => {
  * Sends a "thank you" email to the user who submitted the contact form.
  * @param {Object} contactData - The data from the contact form submission.
  */
-const sendThankYouEmail = async (contactData) => {
+export const sendThankYouEmail = async (contactData) => {
     const { name, email } = contactData;
     const mailOptions = {
         from: `Anshuman Pati <${from_EMAIL_ADDRESS}>`,
@@ -86,7 +86,7 @@ const sendThankYouEmail = async (contactData) => {
  * Sends a notification email to the portfolio owner for a new suggestion.
  * @param {Object} suggestionData - The data from the suggestion form submission.
  */
-const sendSuggestionNotification = async (suggestionData) => {
+export const sendSuggestionNotification = async (suggestionData) => {
     const { name, suggested } = suggestionData;
     const mailOptions = {
         from: `Anshuman Pati <${from_EMAIL_ADDRESS}>`,
@@ -110,10 +110,4 @@ const sendSuggestionNotification = async (suggestionData) => {
     } catch (error) {
         console.error('Error sending - suggestion email:', error);
     }
-};
-
-module.exports = {
-    sendContactNotification,
-    sendThankYouEmail,
-    sendSuggestionNotification,
 };
