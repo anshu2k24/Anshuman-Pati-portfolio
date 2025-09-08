@@ -3,13 +3,15 @@
 
 // We need to import NextResponse from 'next/server' for handling responses.
 import { NextResponse } from 'next/server';
+// Import the database connection helper.
+import { dbConnect } from '../../lib/dbConnect';
 
 // These imports are assumed to exist in your Next.js project.
 // You will need to create the Mongoose model and the email service functions
 // in the appropriate locations within your project structure.
 // For example: `models/ContactMeModel.js` and `services/emailService.js`
-import Contact from './models/ContactMeModel';
-import { sendContactNotification, sendThankYouEmail } from './services/emailService';
+import Contact from '../../model/ContactMeModel';
+import { sendContactNotification, sendThankYouEmail } from '../../services/emailService';
 
 /**
  * Handles the POST request for contact form submissions.
@@ -18,6 +20,9 @@ import { sendContactNotification, sendThankYouEmail } from './services/emailServ
  */
 export async function POST(req) {
     try {
+        // Connect to the database before any operations.
+        await dbConnect();
+
         // Parse the JSON body from the request.
         const { name, email, msg, mobile } = await req.json();
 
