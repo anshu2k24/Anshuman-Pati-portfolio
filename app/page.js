@@ -1,6 +1,7 @@
 "use client";
-import Image from "next/image";
+
 import { useState } from "react";
+import Spline from "@splinetool/react-spline";
 
 export default function Home() {
   const [contactForm, setContactForm] = useState({
@@ -64,36 +65,34 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+    <div className="min-h-screen bg-gray-50 text-gray-800">
       {/* Fixed Navigation */}
-      <nav className="fixed top-0 w-full bg-black/20 backdrop-blur-md z-50 border-b border-white/10">
+      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Portfolio
-            </div>
+            <div className="text-2xl font-bold text-gray-900">Portfolio</div>
             <div className="hidden md:flex space-x-8">
-              <a href="#home" className="hover:text-blue-400 transition-colors">
+              <a href="#home" className="hover:text-blue-500 transition-colors">
                 Home
               </a>
-              <a href="#tech" className="hover:text-blue-400 transition-colors">
+              <a href="#tech" className="hover:text-blue-500 transition-colors">
                 Tech Stack
               </a>
               <a
                 href="#projects"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-blue-500 transition-colors"
               >
                 Projects
               </a>
               <a
                 href="#hackathons"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-blue-500 transition-colors"
               >
                 Hackathons
               </a>
               <a
                 href="#contact"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-blue-500 transition-colors"
               >
                 Contact
               </a>
@@ -102,70 +101,61 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section - My Details */}
+      {/* Hero Section - My Details & Spline */}
       <section id="home" className="pt-20 min-h-screen flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="absolute inset-0 z-0">
+          <Spline scene="https://prod.spline.design/w4ngYMyAtycjkvHV/scene.splinecode" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div>
-                <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <div className="space-y-8 backdrop-blur-sm bg-white/70 p-8 rounded-xl shadow-lg border border-gray-200">
+              {/* <div>
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-gray-700">
                     John Doe
                   </span>
                 </h1>
-                <h2 className="text-2xl md:text-3xl text-gray-300 mb-4">
+                <h2 className="text-2xl md:text-3xl text-gray-600 mb-4">
                   Full Stack Developer
                 </h2>
-                <p className="text-lg text-gray-400 leading-relaxed max-w-2xl">
+                <p className="text-lg text-gray-500 leading-relaxed max-w-2xl">
                   Passionate about creating innovative web solutions and
                   bringing ideas to life through code. I specialize in modern
                   web technologies and love building user-centric applications.
                 </p>
-              </div>
+              </div> */}
 
               {/* Personal Details */}
-              <div className="grid sm:grid-cols-2 gap-4 text-sm">
+              <div className="grid sm:grid-cols-2 gap-4 text-sm text-gray-600">
                 <div className="space-y-2">
                   <p>
-                    <span className="text-blue-400">📧</span> john.doe@email.com
+                    <span className="text-blue-500">📧</span> john.doe@email.com
                   </p>
                   <p>
-                    <span className="text-blue-400">📱</span> +1 (555) 123-4567
+                    <span className="text-blue-500">📱</span> +1 (555) 123-4567
                   </p>
                 </div>
                 <div className="space-y-2">
                   <p>
-                    <span className="text-blue-400">📍</span> San Francisco, CA
+                    <span className="text-blue-500">📍</span> San Francisco, CA
                   </p>
                   <p>
-                    <span className="text-blue-400">🎓</span> CS Graduate
+                    <span className="text-blue-500">🎓</span> CS Graduate
                   </p>
                 </div>
               </div>
 
               {/* Resume Button */}
               <div className="flex flex-wrap gap-4">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg">
+                <button className="bg-gray-800 text-white hover:bg-gray-700 px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg">
                   📄 Download Resume
                 </button>
                 <a
                   href="#contact"
-                  className="border border-white/30 hover:bg-white/10 px-8 py-3 rounded-full font-semibold transition-all"
+                  className="border border-gray-300 text-gray-700 hover:bg-gray-200 px-8 py-3 rounded-full font-semibold transition-all"
                 >
                   Let's Connect
                 </a>
-              </div>
-            </div>
-
-            {/* Profile Image */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative">
-                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-1">
-                  <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-8xl">
-                    👨‍💻
-                  </div>
-                </div>
-                <div className="absolute -z-10 w-80 h-80 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 blur-xl opacity-30"></div>
               </div>
             </div>
           </div>
@@ -173,80 +163,39 @@ export default function Home() {
       </section>
 
       {/* Tech Stack */}
-      <section id="tech" className="py-20 bg-black/20">
+      <section id="tech" className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-gray-700">
               Tech Stack
             </span>
           </h2>
-          <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+          <p className="text-gray-500 text-center mb-16 max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {[
-              { name: "React", icon: "⚛️", color: "from-cyan-400 to-blue-500" },
-              {
-                name: "Next.js",
-                icon: "▲",
-                color: "from-gray-400 to-gray-600",
-              },
-              {
-                name: "TypeScript",
-                icon: "📘",
-                color: "from-blue-400 to-blue-600",
-              },
-              {
-                name: "Node.js",
-                icon: "🟢",
-                color: "from-green-400 to-green-600",
-              },
-              {
-                name: "Python",
-                icon: "🐍",
-                color: "from-yellow-400 to-green-500",
-              },
-              {
-                name: "MongoDB",
-                icon: "🍃",
-                color: "from-green-400 to-green-600",
-              },
-              {
-                name: "PostgreSQL",
-                icon: "🐘",
-                color: "from-blue-400 to-blue-600",
-              },
-              {
-                name: "AWS",
-                icon: "☁️",
-                color: "from-orange-400 to-yellow-500",
-              },
-              {
-                name: "Docker",
-                icon: "🐳",
-                color: "from-blue-400 to-cyan-500",
-              },
-              { name: "Git", icon: "📚", color: "from-red-400 to-red-600" },
-              {
-                name: "Figma",
-                icon: "🎨",
-                color: "from-purple-400 to-pink-500",
-              },
-              {
-                name: "Tailwind",
-                icon: "💨",
-                color: "from-teal-400 to-blue-500",
-              },
+              { name: "React", icon: "⚛️" },
+              { name: "Next.js", icon: "▲" },
+              { name: "TypeScript", icon: "📘" },
+              { name: "Node.js", icon: "🟢" },
+              { name: "Python", icon: "🐍" },
+              { name: "MongoDB", icon: "🍃" },
+              { name: "PostgreSQL", icon: "🐘" },
+              { name: "AWS", icon: "☁️" },
+              { name: "Docker", icon: "🐳" },
+              { name: "Git", icon: "📚" },
+              { name: "Figma", icon: "🎨" },
+              { name: "Tailwind", icon: "💨" },
             ].map((tech, index) => (
               <div key={index} className="group relative">
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300 transform group-hover:scale-105 border border-white/10">
+                <div className="bg-white rounded-xl p-6 text-center hover:bg-gray-100 transition-all duration-300 transform group-hover:scale-105 border border-gray-200">
                   <div className="text-4xl mb-3">{tech.icon}</div>
-                  <p className="font-semibold text-sm">{tech.name}</p>
+                  <p className="font-semibold text-sm text-gray-800">
+                    {tech.name}
+                  </p>
                 </div>
-                <div
-                  className={`absolute inset-0 bg-gradient-to-r ${tech.color} rounded-xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10`}
-                ></div>
               </div>
             ))}
           </div>
@@ -256,12 +205,12 @@ export default function Home() {
       {/* Projects */}
       <section id="projects" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-gray-700">
               Featured Projects
             </span>
           </h2>
-          <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+          <p className="text-gray-500 text-center mb-16 max-w-2xl mx-auto">
             A showcase of my recent work and side projects
           </p>
 
@@ -270,47 +219,37 @@ export default function Home() {
               {
                 name: "E-Commerce Platform",
                 tech: ["React", "Node.js", "MongoDB"],
-                gradient: "from-blue-500 to-cyan-500",
               },
               {
                 name: "Task Management App",
                 tech: ["Next.js", "PostgreSQL", "Prisma"],
-                gradient: "from-purple-500 to-pink-500",
               },
               {
                 name: "Social Media Dashboard",
                 tech: ["Vue.js", "Express", "Redis"],
-                gradient: "from-green-500 to-teal-500",
               },
               {
                 name: "Cryptocurrency Tracker",
                 tech: ["React", "Chart.js", "API"],
-                gradient: "from-yellow-500 to-orange-500",
               },
               {
                 name: "AI Chat Application",
                 tech: ["Next.js", "OpenAI", "Supabase"],
-                gradient: "from-indigo-500 to-purple-500",
               },
               {
                 name: "Weather Forecast App",
                 tech: ["React Native", "Weather API", "Redux"],
-                gradient: "from-cyan-500 to-blue-500",
               },
             ].map((project, index) => (
               <div
                 key={index}
-                className="group relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 transform hover:scale-105 border border-white/10"
+                className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-200"
               >
-                <div
-                  className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}
-                >
-                  <div className="text-6xl opacity-20">🚀</div>
-                  <div className="absolute inset-0 bg-black/20"></div>
-                </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3">{project.name}</h3>
-                  <p className="text-gray-400 mb-4 text-sm">
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">
+                    {project.name}
+                  </h3>
+                  <p className="text-gray-500 mb-4 text-sm">
                     A comprehensive solution built with modern technologies to
                     solve real-world problems and enhance user experience.
                   </p>
@@ -318,7 +257,7 @@ export default function Home() {
                     {project.tech.map((tech, i) => (
                       <span
                         key={i}
-                        className="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-xs"
+                        className="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-xs"
                       >
                         {tech}
                       </span>
@@ -327,13 +266,13 @@ export default function Home() {
                   <div className="flex gap-4">
                     <a
                       href="#"
-                      className="text-blue-400 hover:text-blue-300 text-sm font-medium"
+                      className="text-blue-500 hover:text-blue-400 text-sm font-medium"
                     >
                       Live Demo →
                     </a>
                     <a
                       href="#"
-                      className="text-purple-400 hover:text-purple-300 text-sm font-medium"
+                      className="text-gray-600 hover:text-gray-500 text-sm font-medium"
                     >
                       Source Code →
                     </a>
@@ -346,14 +285,14 @@ export default function Home() {
       </section>
 
       {/* Hackathons */}
-      <section id="hackathons" className="py-20 bg-black/20">
+      <section id="hackathons" className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-gray-700">
               Hackathons & Competitions
             </span>
           </h2>
-          <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+          <p className="text-gray-500 text-center mb-16 max-w-2xl mx-auto">
             Projects and achievements from various hackathons and coding
             competitions
           </p>
@@ -391,27 +330,29 @@ export default function Home() {
             ].map((hackathon, index) => (
               <div
                 key={index}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/10"
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-bold mb-1">
+                    <h3 className="text-xl font-bold mb-1 text-gray-900">
                       {hackathon.project}
                     </h3>
-                    <p className="text-blue-400 font-medium">
+                    <p className="text-blue-500 font-medium">
                       {hackathon.event}
                     </p>
                   </div>
                   {hackathon.certificate && (
-                    <div className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs font-medium">
+                    <div className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-medium">
                       📜 Certified
                     </div>
                   )}
                 </div>
 
-                <div className="text-2xl mb-3">{hackathon.achievement}</div>
+                <div className="text-2xl mb-3 text-gray-700">
+                  {hackathon.achievement}
+                </div>
 
-                <p className="text-gray-400 text-sm mb-4">
+                <p className="text-gray-500 text-sm mb-4">
                   Innovative solution addressing real-world challenges with
                   cutting-edge technology and creative problem-solving.
                 </p>
@@ -420,7 +361,7 @@ export default function Home() {
                   {hackathon.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-purple-600/20 text-purple-400 px-3 py-1 rounded-full text-xs"
+                      className="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-xs"
                     >
                       {tech}
                     </span>
@@ -430,14 +371,14 @@ export default function Home() {
                 <div className="flex gap-4 text-sm">
                   <a
                     href="#"
-                    className="text-blue-400 hover:text-blue-300 font-medium"
+                    className="text-blue-500 hover:text-blue-400 font-medium"
                   >
                     View Project →
                   </a>
                   {hackathon.certificate && (
                     <a
                       href="#"
-                      className="text-yellow-400 hover:text-yellow-300 font-medium"
+                      className="text-gray-600 hover:text-gray-500 font-medium"
                     >
                       View Certificate →
                     </a>
@@ -452,8 +393,8 @@ export default function Home() {
       {/* Social Handles */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-8">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-3xl font-bold mb-8 text-gray-900">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-gray-700">
               Let's Connect
             </span>
           </h2>
@@ -463,43 +404,43 @@ export default function Home() {
                 name: "GitHub",
                 icon: "🔗",
                 url: "#",
-                color: "hover:text-gray-400",
+                color: "hover:text-gray-600",
               },
               {
                 name: "LinkedIn",
                 icon: "💼",
                 url: "#",
-                color: "hover:text-blue-400",
+                color: "hover:text-blue-600",
               },
               {
                 name: "Twitter",
                 icon: "🐦",
                 url: "#",
-                color: "hover:text-cyan-400",
+                color: "hover:text-cyan-600",
               },
               {
                 name: "Instagram",
                 icon: "📸",
                 url: "#",
-                color: "hover:text-pink-400",
+                color: "hover:text-pink-600",
               },
               {
                 name: "YouTube",
                 icon: "📺",
                 url: "#",
-                color: "hover:text-red-400",
+                color: "hover:text-red-600",
               },
               {
                 name: "Discord",
                 icon: "💬",
                 url: "#",
-                color: "hover:text-indigo-400",
+                color: "hover:text-indigo-600",
               },
             ].map((social, index) => (
               <a
                 key={index}
                 href={social.url}
-                className={`bg-white/5 hover:bg-white/10 p-4 rounded-full transition-all transform hover:scale-110 ${social.color} group`}
+                className={`bg-white hover:bg-gray-100 p-4 rounded-full transition-all transform hover:scale-110 ${social.color} group border border-gray-200`}
                 title={social.name}
               >
                 <span className="text-2xl">{social.icon}</span>
@@ -510,21 +451,25 @@ export default function Home() {
       </section>
 
       {/* Contact Forms */}
-      <section id="contact" className="py-20 bg-black/20">
+      <section id="contact" className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-gray-700">
               Get In Touch
             </span>
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold mb-6">Send me a message</h3>
+            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
+              <h3 className="text-2xl font-bold mb-6 text-gray-900">
+                Send me a message
+              </h3>
               <form onSubmit={handleContactSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium mb-2">Name</label>
+                  <label className="block text-sm font-medium mb-2 text-gray-700">
+                    Name
+                  </label>
                   <input
                     type="text"
                     required
@@ -532,12 +477,12 @@ export default function Home() {
                     onChange={(e) =>
                       setContactForm({ ...contactForm, name: e.target.value })
                     }
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full bg-gray-100 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-400"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">
+                  <label className="block text-sm font-medium mb-2 text-gray-700">
                     Email
                   </label>
                   <input
@@ -547,12 +492,12 @@ export default function Home() {
                     onChange={(e) =>
                       setContactForm({ ...contactForm, email: e.target.value })
                     }
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full bg-gray-100 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-400"
                     placeholder="your.email@example.com"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">
+                  <label className="block text-sm font-medium mb-2 text-gray-700">
                     Message
                   </label>
                   <textarea
@@ -562,13 +507,13 @@ export default function Home() {
                     onChange={(e) =>
                       setContactForm({ ...contactForm, msg: e.target.value })
                     }
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                    className="w-full bg-gray-100 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none text-gray-900 placeholder-gray-400"
                     placeholder="Your message..."
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
+                  className="w-full bg-gray-800 text-white hover:bg-gray-700 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
                 >
                   Send Message
                 </button>
@@ -576,8 +521,8 @@ export default function Home() {
                   <p
                     className={`text-center text-sm ${
                       contactStatus.includes("successfully")
-                        ? "text-green-400"
-                        : "text-red-400"
+                        ? "text-green-600"
+                        : "text-red-600"
                     }`}
                   >
                     {contactStatus}
@@ -587,11 +532,15 @@ export default function Home() {
             </div>
 
             {/* Suggestion Form */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold mb-6">Share a suggestion</h3>
+            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
+              <h3 className="text-2xl font-bold mb-6 text-gray-900">
+                Share a suggestion
+              </h3>
               <form onSubmit={handleSuggestionSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium mb-2">Name</label>
+                  <label className="block text-sm font-medium mb-2 text-gray-700">
+                    Name
+                  </label>
                   <input
                     type="text"
                     required
@@ -602,12 +551,12 @@ export default function Home() {
                         name: e.target.value,
                       })
                     }
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full bg-gray-100 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-400"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">
+                  <label className="block text-sm font-medium mb-2 text-gray-700">
                     Suggestion
                   </label>
                   <textarea
@@ -620,13 +569,13 @@ export default function Home() {
                         suggested: e.target.value,
                       })
                     }
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                    className="w-full bg-gray-100 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none text-gray-900 placeholder-gray-400"
                     placeholder="Share your ideas, feedback, or suggestions..."
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
+                  className="w-full bg-gray-800 text-white hover:bg-gray-700 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
                 >
                   Share Suggestion
                 </button>
@@ -634,8 +583,8 @@ export default function Home() {
                   <p
                     className={`text-center text-sm ${
                       suggestionStatus.includes("successfully")
-                        ? "text-green-400"
-                        : "text-red-400"
+                        ? "text-green-600"
+                        : "text-red-600"
                     }`}
                   >
                     {suggestionStatus}
@@ -648,13 +597,13 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-white/10">
+      <footer className="py-12 border-t border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-500 mb-4">
               Made with ❤️ and lots of ☕ by John Doe
             </p>
-            <p className="text-gray-500 text-sm">© 2024 All rights reserved.</p>
+            <p className="text-gray-400 text-sm">© 2024 All rights reserved.</p>
           </div>
         </div>
       </footer>
