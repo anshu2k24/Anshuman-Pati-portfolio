@@ -65,7 +65,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
+    <div className="min-h-screen bg-white text-gray-800">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -104,11 +104,12 @@ export default function Home() {
       {/* Hero Section - My Details & Spline */}
       <section id="home" className="pt-20 min-h-screen flex items-center">
         <div className="absolute inset-0 z-0">
-          <Spline scene="https://prod.spline.design/w4ngYMyAtycjkvHV/scene.splinecode" />
+          <Spline scene="https://prod.spline.design/HvslEaJIVL9auw6l/scene.splinecode" />
+          {/* <Spline scene="https://prod.spline.design/w4ngYMyAtycjkvHV/scene.splinecode" /> */}
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 backdrop-blur-sm bg-white/70 p-8 rounded-xl shadow-lg border border-gray-200">
+            <div className="">
               {/* <div>
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-gray-700">
@@ -126,7 +127,7 @@ export default function Home() {
               </div> */}
 
               {/* Personal Details */}
-              <div className="grid sm:grid-cols-2 gap-4 text-sm text-gray-600">
+              {/* <div className="grid sm:grid-cols-2 gap-4 text-sm text-gray-600">
                 <div className="space-y-2">
                   <p>
                     <span className="text-blue-500">📧</span> john.doe@email.com
@@ -143,10 +144,10 @@ export default function Home() {
                     <span className="text-blue-500">🎓</span> CS Graduate
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               {/* Resume Button */}
-              <div className="flex flex-wrap gap-4">
+              {/* <div className="flex flex-wrap gap-4">
                 <button className="bg-gray-800 text-white hover:bg-gray-700 px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg">
                   📄 Download Resume
                 </button>
@@ -156,7 +157,7 @@ export default function Home() {
                 >
                   Let's Connect
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
