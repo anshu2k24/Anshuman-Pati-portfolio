@@ -396,7 +396,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-8 text-gray-900">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-gray-700">
-              Let's Connect
+              Let&apos;s Connect
             </span>
           </h2>
           <div className="flex justify-center space-x-6">
