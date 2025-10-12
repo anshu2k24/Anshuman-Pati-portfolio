@@ -11,9 +11,8 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-800">
-      {/* Navigation (keep it inside Hero if your Hero has it) */}
+      
       <Hero />
-
       <TechStack />
       <Projects />
       <Hackathons />

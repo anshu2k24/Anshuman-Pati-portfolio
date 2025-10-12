@@ -22,7 +22,7 @@ const suggestionSchema = new mongoose.Schema({
     },
 });
 
-// Create the Mongoose model from the schema
-const Suggestion = mongoose.model('Suggestion', suggestionSchema);
+const Suggestion = mongoose.models.Suggestion || mongoose.model('Suggestion', suggestionSchema);
+
 
 module.exports = Suggestion;

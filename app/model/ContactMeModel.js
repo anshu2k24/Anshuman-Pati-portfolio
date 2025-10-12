@@ -1,33 +1,14 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const contactSchema = new mongoose.Schema({
-  email: {
-    type: String,
-    required: true,
-    trim: true,
-    lowercase: true,
-    match: [/.+@.+\..+/, 'Please enter a valid email address'], 
-  },
-  name: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  msg: {
-    type: String,
-    required: true,
-  },
-  mobile: {
-    type: String,
-    required: false,
-    trim: true,
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
+  email: { type: String, required: true, trim: true, lowercase: true },
+  name: { type: String, required: true, trim: true },
+  msg: { type: String, required: true },
+  mobile: { type: String, trim: true },
+  createdAt: { type: Date, default: Date.now },
 });
 
-const Contact = mongoose.model('Contact', contactSchema);
+// Check if model already exists, otherwise create it
+const Contact = mongoose.models.Contact || mongoose.model('Contact', contactSchema);
 
-module.exports = Contact;
+export default Contact;
