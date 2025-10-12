@@ -109,56 +109,7 @@ export default function Home() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="">
-              {/* <div>
-                <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-gray-700">
-                    John Doe
-                  </span>
-                </h1>
-                <h2 className="text-2xl md:text-3xl text-gray-600 mb-4">
-                  Full Stack Developer
-                </h2>
-                <p className="text-lg text-gray-500 leading-relaxed max-w-2xl">
-                  Passionate about creating innovative web solutions and
-                  bringing ideas to life through code. I specialize in modern
-                  web technologies and love building user-centric applications.
-                </p>
-              </div> */}
-
-              {/* Personal Details */}
-              {/* <div className="grid sm:grid-cols-2 gap-4 text-sm text-gray-600">
-                <div className="space-y-2">
-                  <p>
-                    <span className="text-blue-500">📧</span> john.doe@email.com
-                  </p>
-                  <p>
-                    <span className="text-blue-500">📱</span> +1 (555) 123-4567
-                  </p>
-                </div>
-                <div className="space-y-2">
-                  <p>
-                    <span className="text-blue-500">📍</span> San Francisco, CA
-                  </p>
-                  <p>
-                    <span className="text-blue-500">🎓</span> CS Graduate
-                  </p>
-                </div>
-              </div> */}
-
-              {/* Resume Button */}
-              {/* <div className="flex flex-wrap gap-4">
-                <button className="bg-gray-800 text-white hover:bg-gray-700 px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg">
-                  📄 Download Resume
-                </button>
-                <a
-                  href="#contact"
-                  className="border border-gray-300 text-gray-700 hover:bg-gray-200 px-8 py-3 rounded-full font-semibold transition-all"
-                >
-                  Let's Connect
-                </a>
-              </div> */}
-            </div>
+            <div className=""></div>
           </div>
         </div>
       </section>
@@ -179,16 +130,24 @@ export default function Home() {
             {[
               { name: "React", icon: "⚛️" },
               { name: "Next.js", icon: "▲" },
+              { name: "Javascript", icon: "📘" },
               { name: "TypeScript", icon: "📘" },
               { name: "Node.js", icon: "🟢" },
               { name: "Python", icon: "🐍" },
               { name: "MongoDB", icon: "🍃" },
-              { name: "PostgreSQL", icon: "🐘" },
-              { name: "AWS", icon: "☁️" },
-              { name: "Docker", icon: "🐳" },
+              { name: "Github", icon: "🐘" },
+              { name: "Firebase", icon: "☁️" },
+              { name: "Supabase", icon: "🐳" },
               { name: "Git", icon: "📚" },
               { name: "Figma", icon: "🎨" },
-              { name: "Tailwind", icon: "💨" },
+              { name: "Tailwindcss", icon: "💨" },
+              { name: "C/C++", icon: "💨" },
+              { name: "OpenCv", icon: "💨" },
+              { name: "YoloV8", icon: "💨" },
+              { name: "Tensorflow", icon: "💨" },
+              { name: "SQL", icon: "💨" },
+              { name: "Arduino", icon: "💨" },
+              { name: "ESP32", icon: "💨" },
             ].map((tech, index) => (
               <div key={index} className="group relative">
                 <div className="bg-white rounded-xl p-6 text-center hover:bg-gray-100 transition-all duration-300 transform group-hover:scale-105 border border-gray-200">
@@ -218,28 +177,41 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "E-Commerce Platform",
-                tech: ["React", "Node.js", "MongoDB"],
+                name: "EcoAi",
+                tech: ["AI", "Sustainability", "Efficiency"],
               },
               {
-                name: "Task Management App",
-                tech: ["Next.js", "PostgreSQL", "Prisma"],
+                name: "Rock, Paper, and Scissor",
+                tech: ["YOLOv8", "TensorFlow", "OpenCV"],
               },
               {
-                name: "Social Media Dashboard",
-                tech: ["Vue.js", "Express", "Redis"],
+                name: "UniTech",
+                tech: ["React", "Firebase", "Node.js"],
               },
               {
-                name: "Cryptocurrency Tracker",
-                tech: ["React", "Chart.js", "API"],
+                name: "Password Manager",
+                tech: ["Python", "Encryption", "Web"],
               },
               {
-                name: "AI Chat Application",
-                tech: ["Next.js", "OpenAI", "Supabase"],
+                name: "StudyAi",
+                tech: ["React", "TailwindCSS", "Firebase", "Python AI"],
               },
               {
-                name: "Weather Forecast App",
-                tech: ["React Native", "Weather API", "Redux"],
+                name: "PCFR",
+                tech: ["Arduino Uno", "Rain Sensor", "SG90 Servo"],
+              },
+              {
+                name: "NeroBot",
+                tech: ["Arduino Uno", "SG90 Servo"],
+              },
+              {
+                name: "Glider",
+                tech: [
+                  "Arduino Uno",
+                  "MPU6050",
+                  "Li-ion Battery",
+                  "SG90 Servo",
+                ],
               },
             ].map((project, index) => (
               <div
@@ -301,31 +273,52 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                event: "TechCrunch Disrupt 2024",
-                project: "EcoTrack - Carbon Footprint Tracker",
-                achievement: "🥇 1st Place Winner",
-                tech: ["React Native", "AI/ML", "Blockchain"],
+                event: "MakerBlitz Hackathon",
+                project: "EcoAi",
+                achievement: "🥇 Appreciation Prize",
+                tech: ["AI/ML", "Sustainability"],
                 certificate: true,
               },
               {
-                event: "NASA Space Apps Challenge",
-                project: "Mars Rover Navigation System",
-                achievement: "🥈 2nd Place Global",
-                tech: ["Python", "Computer Vision", "IoT"],
+                event: "CypherQuest",
+                project: "Participation",
+                achievement: "✅ Certificate of Participation",
+                tech: ["Tech Event"],
                 certificate: true,
               },
               {
-                event: "Google Developer Challenge",
-                project: "Smart City Traffic Optimizer",
-                achievement: "🏆 Best Innovation Award",
-                tech: ["Flutter", "Google Cloud", "TensorFlow"],
+                event: "ByteXync",
+                project: "Participation",
+                achievement: "✅ Certificate of Participation",
+                tech: ["Tech Event"],
                 certificate: true,
               },
               {
-                event: "Meta Hackathon 2024",
-                project: "VR Learning Platform",
-                achievement: "🎯 Top 10 Finalist",
-                tech: ["React VR", "Node.js", "WebRTC"],
+                event: "Confluence PES",
+                project: "Participation",
+                achievement: "✅ Certificate of Participation",
+                tech: ["Tech Event"],
+                certificate: true,
+              },
+              {
+                event: "TechTrek",
+                project: "Participation",
+                achievement: "✅ Certificate of Participation",
+                tech: ["Tech Event"],
+                certificate: true,
+              },
+              {
+                event: "Smart India Hackathon 2025",
+                project: "Internal Round Selection",
+                achievement: "🎯 Qualified for Nationals",
+                tech: ["Problem Solving", "Team Project"],
+                certificate: false,
+              },
+              {
+                event: "Genesis Club - DSCE",
+                project: "Tech Team Member",
+                achievement: "👥 Core Contributor",
+                tech: ["Leadership", "Teamwork"],
                 certificate: false,
               },
             ].map((hackathon, index) => (
@@ -404,39 +397,15 @@ export default function Home() {
               {
                 name: "GitHub",
                 icon: "🔗",
-                url: "#",
+                url: "https://github.com/anshu2k24",
                 color: "hover:text-gray-600",
               },
               {
                 name: "LinkedIn",
                 icon: "💼",
-                url: "#",
+                url: "https://www.linkedin.com/in/anshuman-pati-5575bb34a/",
                 color: "hover:text-blue-600",
-              },
-              {
-                name: "Twitter",
-                icon: "🐦",
-                url: "#",
-                color: "hover:text-cyan-600",
-              },
-              {
-                name: "Instagram",
-                icon: "📸",
-                url: "#",
-                color: "hover:text-pink-600",
-              },
-              {
-                name: "YouTube",
-                icon: "📺",
-                url: "#",
-                color: "hover:text-red-600",
-              },
-              {
-                name: "Discord",
-                icon: "💬",
-                url: "#",
-                color: "hover:text-indigo-600",
-              },
+              }
             ].map((social, index) => (
               <a
                 key={index}
@@ -602,9 +571,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-gray-500 mb-4">
-              Made with ❤️ and lots of ☕ by John Doe
+              Just Anshu 😎
             </p>
-            <p className="text-gray-400 text-sm">© 2024 All rights reserved.</p>
+            <p className="text-gray-400 text-sm">© 2025 All rights reserved.</p>
           </div>
         </div>
       </footer>
