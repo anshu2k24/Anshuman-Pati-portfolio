@@ -8,20 +8,21 @@ export default function Hero() {
   return (
     <section id="home" className="pt-20 min-h-screen flex flex-col relative overflow-hidden">
       {/* Spline Background */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <Spline scene="https://prod.spline.design/HvslEaJIVL9auw6l/scene.splinecode" />
+      <div className="absolute inset-0 w-full h-full">
+        <Spline
+          scene="https://prod.spline.design/HvslEaJIVL9auw6l/scene.splinecode"
+          className="w-full h-full"
+        />
       </div>
-
-      {/* Gradient Overlay for better text visibility */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-white/80 z-0 pointer-events-none"></div>
 
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/70 backdrop-blur-xl z-50 border-b border-gray-200/50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
-              Portfolio
-            </div>
+  code Anshu()&#123;...&#125;
+</div>
+
             <div className="hidden md:flex space-x-8">
               {navItems.map((item) => (
                 <a
@@ -41,12 +42,8 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex-grow flex items-center">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            {/* You can add Hero text, CTA buttons here */}
-          </div>
-          <div>
-            {/* Optional second column content */}
-          </div>
+          <div>{/* Add Hero text/CTA here */}</div>
+          <div>{/* Optional second column */}</div>
         </div>
       </div>
     </section>
