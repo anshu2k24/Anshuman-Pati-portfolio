@@ -3,12 +3,12 @@
 export default function Hackathons() {
   const hackathons = [
     { event: "MakerBlitz Hackathon", project: "EcoAi", achievement: "🥇 Appreciation Prize", tech: ["AI/ML", "Sustainability"], certificate: true, color: "from-yellow-400 to-orange-500" },
-    { event: "CypherQuest", project: "Participation", achievement: "✅ Certificate of Participation", tech: ["Tech Event"], certificate: true, color: "from-blue-400 to-cyan-500" },
-    { event: "ByteXync", project: "Participation", achievement: "✅ Certificate of Participation", tech: ["Tech Event"], certificate: true, color: "from-purple-400 to-pink-500" },
-    { event: "Confluence PES", project: "Participation", achievement: "✅ Certificate of Participation", tech: ["Tech Event"], certificate: true, color: "from-green-400 to-teal-500" },
-    { event: "TechTrek", project: "Participation", achievement: "✅ Certificate of Participation", tech: ["Tech Event"], certificate: true, color: "from-indigo-400 to-blue-500" },
+    { event: "CypherQuest", project: "Participation", achievement: "Certificate of Participation", tech: ["Tech Event"], certificate: true, color: "from-blue-400 to-cyan-500" },
+    { event: "ByteXync", project: "Participation", achievement: "Certificate of Participation", tech: ["Tech Event"], certificate: true, color: "from-purple-400 to-pink-500" },
+    { event: "Confluence PES", project: "Participation", achievement: "Certificate of Participation", tech: ["Tech Event"], certificate: true, color: "from-green-400 to-teal-500" },
+    { event: "TechTrek", project: "Participation", achievement: "Certificate of Participation", tech: ["Tech Event"], certificate: true, color: "from-indigo-400 to-blue-500" },
     { event: "Smart India Hackathon 2025", project: "Internal Round Selection", achievement: "🎯 Qualified for Nationals", tech: ["Problem Solving", "Team Project"], certificate: false, color: "from-orange-400 to-red-500" },
-    { event: "Genesis Club - DSCE", project: "Tech Team Member", achievement: "👥 Core Contributor", tech: ["Leadership", "Teamwork"], certificate: false, color: "from-violet-400 to-purple-500" },
+    { event: "Genesis Club - DSCE", project: "Tech Team Member", achievement: "🤵🏻Contributor", tech: ["Leadership", "Teamwork", "Web Dev"], certificate: false, color: "from-violet-400 to-purple-500" },
   ];
 
   return (
