@@ -20,13 +20,11 @@ export default function Hero() {
     <section id="home" className="pt-20 min-h-screen flex flex-col relative overflow-hidden bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30">
       {/* Spline Background for Tablet+ screens */}
       {isTabletOrDesktop && (
-        <div className="absolute inset-0 w-full h-full">
+        <div>
           <Spline
             scene="https://prod.spline.design/HvslEaJIVL9auw6l/scene.splinecode"
-            className="w-full h-full"
+            className=""
           />
-          {/* Minimal gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/20"></div>
         </div>
       )}
 
