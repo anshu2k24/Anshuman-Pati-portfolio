@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import Link from "next/link"; // *** ADDED: Import Link for internal routing ***
 import Navigation from "../../components/navigation";
 
 import {
@@ -12,7 +13,7 @@ import {
   GlobeAltIcon,
   CodeBracketIcon,
   ArrowRightIcon,
-  GitHubIcon, 
+  GitHubIcon,
   LinkedInIcon,
 } from "../../components/Icons"; // All from one file now
 
@@ -28,12 +29,12 @@ export default function EcoAiPage() {
     {
       name: "Midde Jayanth",
       github: "https://github.com/Jayasurya09s",
-      linkedin: "https://www.linkedin.com/in/jayanth-midde-968150321/"
+      linkedin: "https://www.linkedin.com/in/jayanth-midde-968150321/",
     },
     {
       name: "Aman Kumar Singh",
       github: "https://github.com/AmanSingh007coder",
-      linkedin: "https://www.linkedin.com/in/aman-kumar-singh-be/"
+      linkedin: "https://www.linkedin.com/in/aman-kumar-singh-be/",
     },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -120,66 +121,68 @@ export default function EcoAiPage() {
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-    <a
-        href="https://github.com/anshu2k24/enhanced-prompt"
-        target="_blank"
-        className="group inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold shadow-xl shadow-emerald-500/25 hover:shadow-2xl hover:shadow-emerald-500/40 transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5"
-    >
-        <CodeBracketIcon className="w-5 h-5" />
-        View Source Code
-        <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-    </a>
-    <a
-        href="#demo"
-        className="inline-flex items-center gap-2 bg-white px-8 py-4 rounded-xl font-semibold text-slate-700 ring-2 ring-slate-200 hover:ring-emerald-300 hover:bg-slate-50 transition-all duration-300 shadow-lg hover:shadow-xl"
-    >
-        Try Demo
-        <span className="text-xs bg-emerald-100 text-emerald-600 px-2 py-0.5 rounded-full">Soon</span>
-    </a>
-   
-    <div className="w-full pt-8">
-    <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-6 border-t pt-4 mt-4 lg:mt-0 lg:pt-0 lg:border-t-0">
-        Project Contributors
-    </h3>
-    <div className="grid grid-cols-1  gap-4">
-        {contributors.map((contributor) => (
-            <div 
-                key={contributor.name} 
-                className="group flex items-center justify-between gap-3 p-4 bg-white rounded-xl border border-slate-200 hover:border-emerald-400 hover:shadow-lg transition-all duration-300"
-            >
-                <div className="flex-1 min-w-0">
-                    <h4 className="text-base font-semibold text-slate-900 truncate mb-1">
-                        {contributor.name}
-                    </h4>
-                    <p className="text-sm text-emerald-600 font-medium">
-                        {contributor.role}
-                    </p>
+                <a
+                  href="https://github.com/anshu2k24/enhanced-prompt"
+                  target="_blank"
+                  className="group inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold shadow-xl shadow-emerald-500/25 hover:shadow-2xl hover:shadow-emerald-500/40 transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5"
+                >
+                  <CodeBracketIcon className="w-5 h-5" />
+                  View Source Code
+                  <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a
+                  href="#demo"
+                  className="inline-flex items-center gap-2 bg-white px-8 py-4 rounded-xl font-semibold text-slate-700 ring-2 ring-slate-200 hover:ring-emerald-300 hover:bg-slate-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Try Demo
+                  <span className="text-xs bg-emerald-100 text-emerald-600 px-2 py-0.5 rounded-full">
+                    Soon
+                  </span>
+                </a>
+
+                <div className="w-full pt-8">
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-6 border-t pt-4 mt-4 lg:mt-0 lg:pt-0 lg:border-t-0">
+                    Project Contributors
+                  </h3>
+                  <div className="grid grid-cols-1 gap-4">
+                    {contributors.map((contributor) => (
+                      <div
+                        key={contributor.name}
+                        className="group flex items-center justify-between gap-3 p-4 bg-white rounded-xl border border-slate-200 hover:border-emerald-400 hover:shadow-lg transition-all duration-300"
+                      >
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-base font-semibold text-slate-900 truncate mb-1">
+                            {contributor.name}
+                          </h4>
+                          <p className="text-sm text-emerald-600 font-medium">
+                            {contributor.role}
+                          </p>
+                        </div>
+                        <div className="flex gap-2 flex-shrink-0">
+                          <a
+                            href={contributor.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${contributor.name}'s GitHub`}
+                            className="p-2 rounded-lg bg-slate-50 text-slate-600 hover:bg-slate-900 hover:text-white transition-all duration-200"
+                          >
+                            <GitHubIcon className="w-5 h-5" />
+                          </a>
+                          <a
+                            href={contributor.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${contributor.name}'s LinkedIn`}
+                            className="p-2 rounded-lg bg-slate-50 text-slate-600 hover:bg-blue-600 hover:text-white transition-all duration-200"
+                          >
+                            <LinkedInIcon className="w-5 h-5" />
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="flex gap-2 flex-shrink-0">
-                    <a 
-                        href={contributor.github} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        aria-label={`${contributor.name}'s GitHub`}
-                        className="p-2 rounded-lg bg-slate-50 text-slate-600 hover:bg-slate-900 hover:text-white transition-all duration-200"
-                    >
-                        <GitHubIcon className="w-5 h-5" />
-                    </a>
-                    <a 
-                        href={contributor.linkedin} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        aria-label={`${contributor.name}'s LinkedIn`}
-                        className="p-2 rounded-lg bg-slate-50 text-slate-600 hover:bg-blue-600 hover:text-white transition-all duration-200"
-                    >
-                        <LinkedInIcon className="w-5 h-5" />
-                    </a>
-                </div>
-            </div>
-        ))}
-    </div>
-    </div>
-</div>
+              </div>
             </div>
 
             {/* Enhanced Comparison Card */}
@@ -207,10 +210,10 @@ export default function EcoAiPage() {
                         </span>
                       </div>
                       <p className="font-mono text-sm text-slate-700 leading-relaxed">
-                        "Could you please do me a favor and try to explain the
+                        &quot;Could you please do me a favor and try to explain the
                         concept of photosynthesis in a way that is really simple
-                        and easy for a beginner to understand? I'm not a science
-                        person. Thank you!"
+                        and easy for a beginner to understand? I&apos;m not a science
+                        person. Thank you!&quot;
                       </p>
                     </div>
                   </div>
@@ -247,7 +250,7 @@ export default function EcoAiPage() {
                         </span>
                       </div>
                       <p className="font-mono text-sm text-slate-700 leading-relaxed">
-                        "Explain photosynthesis in simple terms for a beginner."
+                        &quot;Explain photosynthesis in simple terms for a beginner.&quot;
                       </p>
                     </div>
                   </div>
@@ -342,7 +345,10 @@ export default function EcoAiPage() {
                             repeatCount="indefinite"
                           />
                         </path>
-                        <polygon points="95,20 100,25 95,30" fill="#059669" />
+                        <polygon
+                          points="95,20 100,25 95,30"
+                          fill="#059669"
+                        />
                       </svg>
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg whitespace-nowrap">
                         <SparklesIcon className="w-3 h-3 inline mr-1" />
@@ -447,7 +453,7 @@ export default function EcoAiPage() {
                   </div>
                   <div>
                     <p className="font-bold text-slate-900 mb-1">
-                      Responsible Consumption & Production
+                      Responsible Consumption &amp; Production
                     </p>
                     <p className="text-sm text-slate-600">
                       Reducing waste in AI resource usage
@@ -463,7 +469,7 @@ export default function EcoAiPage() {
                       Climate Action
                     </p>
                     <p className="text-sm text-slate-600">
-                      Lowering AI's carbon footprint
+                      Lowering AI&apos;s carbon footprint
                     </p>
                   </div>
                 </div>
@@ -552,12 +558,13 @@ export default function EcoAiPage() {
                 Explore on GitHub
                 <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a
+              {/* *** FIXED: Changed <a> to <Link> for internal path navigation (line 555 in original code) *** */}
+              <Link
                 href="/#contact"
                 className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold ring-2 ring-white/30 hover:bg-white/20 transition-all duration-300"
               >
                 Get in Touch
-              </a>
+              </Link>
             </div>
 
             {/* Social Proof / Stats */}
@@ -573,7 +580,7 @@ export default function EcoAiPage() {
               EcoAi
             </div>
             <p className="text-xs mt-4">
-              © 2025 EcoAi. Open source and free forever. Anshu 💖
+              &copy; 2025 EcoAi. Open source and free forever. Anshu 💖
             </p>
           </div>
         </div>
