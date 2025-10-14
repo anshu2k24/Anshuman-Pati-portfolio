@@ -2,7 +2,10 @@
 
 export default function Projects() {
   const projects = [
-    { name: "EcoAi", tech: ["AI", "Sustainability", "Efficiency"], gradient: "from-green-400 to-emerald-600" },
+    { name: "EcoAi", 
+      tech: ["AI", "Sustainability", "Efficiency"],
+      desc: ["EcoAi aims to reduce carbon footprints due to use of AI. It does this by imprving user prompt in the Ai chat itself and reducing the tokens consumed. This alligns with SDG 12,13,14."], 
+      gradient: "from-green-400 to-emerald-600" },
     { name: "Rock, Paper, and Scissor", tech: ["YOLOv8", "TensorFlow", "OpenCV"], gradient: "from-purple-400 to-pink-600" },
     { name: "UniTech", tech: ["React", "Firebase", "Node.js"], gradient: "from-blue-400 to-cyan-600" },
     { name: "Password Manager", tech: ["Python", "Encryption", "Web"], gradient: "from-orange-400 to-red-600" },
