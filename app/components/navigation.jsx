@@ -4,8 +4,9 @@ import React from 'react'
 export default function Navigation({ isMenuOpen, setIsMenuOpen }) {
     const navItems = ["Home", "Tech Stack", "Projects", "Hackathons", "Contact"];
     
-    // The onClick handler is correct, it uses the passed prop function
-    // The className logic is also correct, using the passed prop state
+    // Helper function to create the clean slug
+    const createSlug = (item) => item.toLowerCase().replace(" ", "");
+
     return (
         <>
         {/* Navigation - Premium Glassmorphism Style */}
@@ -25,7 +26,8 @@ export default function Navigation({ isMenuOpen, setIsMenuOpen }) {
                             {navItems.map((item) => (
                                 <a
                                     key={item}
-                                    href={`#${item.toLowerCase().replace(" ", "")}`}
+                                    // *** UPDATED HACK: Redirects to the application root (/) then to the section anchor ***
+                                    href={`/#${createSlug(item)}`} 
                                     className="relative px-4 py-2 text-gray-600 hover:text-gray-900 transition-all duration-300 font-medium group text-sm lg:text-base rounded-lg hover:bg-blue-50/50"
                                 >
                                     {item}
@@ -35,7 +37,7 @@ export default function Navigation({ isMenuOpen, setIsMenuOpen }) {
                         </div>
 
                         <button
-                            onClick={() => setIsMenuOpen(!isMenuOpen)} // Uses the prop setIsMenuOpen
+                            onClick={() => setIsMenuOpen(!isMenuOpen)} 
                             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors backdrop-blur-sm text-gray-800"
                             aria-label="Toggle menu"
                         >
@@ -61,15 +63,16 @@ export default function Navigation({ isMenuOpen, setIsMenuOpen }) {
 
                     <div
                         className={`md:hidden overflow-hidden transition-all duration-300 bg-white/90 border-t border-gray-100 ${
-                            isMenuOpen ? "max-h-96 pb-4" : "max-h-0" // Uses the prop isMenuOpen
+                            isMenuOpen ? "max-h-96 pb-4" : "max-h-0" 
                         }`}
                     >
                         <div className="flex flex-col space-y-2 pt-4">
                             {navItems.map((item) => (
                                 <a
                                     key={item}
-                                    href={`#${item.toLowerCase().replace(" ", "")}`}
-                                    onClick={() => setIsMenuOpen(false)} // Closes menu on link click
+                                    // *** UPDATED HACK: Redirects to the application root (/) then to the section anchor ***
+                                    href={`/#${createSlug(item)}`}
+                                    onClick={() => setIsMenuOpen(false)} 
                                     className="text-gray-700 hover:text-gray-900 transition-colors font-medium py-2.5 px-4 rounded-lg hover:bg-gray-100/80"
                                 >
                                     {item}
