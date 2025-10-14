@@ -7,3 +7,15 @@ export const GlobeAltIcon = (props) => <svg {...props} xmlns="http://www.w3.org/
 export const CodeBracketIcon = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>;
 export const ArrowRightIcon = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" /></svg>;
 export const ArrowDownIcon = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5l-7.5 7.5-7.5-7.5" /></svg>;
+
+// --- New Icons added below ---
+
+// GitHub Icon (Using the common Heroicons/Tailwind SVG style)
+export const GitHubIcon = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+  <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.417 2.865 8.17 6.815 9.492.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.157-1.11-1.468-1.11-1.468-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.359-1.088.65-1.338-2.776-.235-5.594-1.395-5.594-6.233 0-1.381.484-2.515 1.272-3.411-.127-.235-.559-1.625.111-3.384 0 0 1.04-.343 3.425 1.31.998-.275 2.05-.412 3.123-.412.008 0 .017 0 .025 0 1.073 0 2.125.137 3.123.412 2.385-1.653 3.425-1.31 3.425-1.31.67 1.759.248 3.149.127 3.384.787.896 1.272 2.03 1.272 3.411 0 4.848-2.829 5.908-5.609 6.164.368.318.682.946.682 1.903 0 1.381-.013 2.482-.013 2.814 0 .267.182.578.688.482A9.917 9.917 0 0022 12.017C22 6.484 17.523 2 12 2z" clipRule="evenodd" />
+</svg>;
+
+// LinkedIn Icon (Using the common Heroicons/Tailwind SVG style)
+export const LinkedInIcon = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+  <path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.528-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.775 7 2.484v6.751z" clipRule="evenodd" />
+</svg>;
