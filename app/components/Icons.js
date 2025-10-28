@@ -19,3 +19,32 @@ export const GitHubIcon = (props) => <svg {...props} xmlns="http://www.w3.org/20
 export const LinkedInIcon = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
   <path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.528-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.775 7 2.484v6.751z" clipRule="evenodd" />
 </svg>;
+
+export const CameraIcon = (props) => (
+  <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none"
+    viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+    className="w-6 h-6">
+    <path strokeLinecap="round" strokeLinejoin="round"
+      d="M3 7.5A2.25 2.25 0 015.25 5.25h1.086a2.25 2.25 0 002.122-1.514l.372-1.008a.75.75 0 01.706-.478h4.528a.75.75 0 01.706.478l.372 1.008a2.25 2.25 0 002.122 1.514h1.086A2.25 2.25 0 0121 7.5v10.5A2.25 2.25 0 0118.75 20.25H5.25A2.25 2.25 0 013 18V7.5z" />
+    <path strokeLinecap="round" strokeLinejoin="round"
+      d="M12 9.75a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5z" />
+  </svg>
+);
+
+export const HandIcon = (props) => (
+  <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none"
+    viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+    className="w-6 h-6">
+    <path strokeLinecap="round" strokeLinejoin="round"
+      d="M8 12V5.25a1.5 1.5 0 113 0V11m0 0V3.75a1.5 1.5 0 113 0V11m0 0V6.75a1.5 1.5 0 113 0v7.5m0 0a4.5 4.5 0 11-9 0v-1.5h9z" />
+  </svg>
+);
+
+export const CheckCircleIcon = (props) => (
+  <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none"
+    viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+    className="w-6 h-6">
+    <path strokeLinecap="round" strokeLinejoin="round"
+      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+);
