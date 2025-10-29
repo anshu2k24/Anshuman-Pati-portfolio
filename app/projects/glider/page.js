@@ -45,13 +45,13 @@ const contributors = [
         name: "Dhruva K R",
         github: "https://github.com/Dhruva-0812/", 
         linkedin: "https://www.linkedin.com/in/dhruva-k-r-a448a934a/", 
-        role: "Sensor Integration",
+        role: "Sensor Integration | Design",
     },
     {
         name: "Aman Kumar Singh",
         github: "https://github.com/AmanSingh007coder",
         linkedin: "https://www.linkedin.com/in/aman-kumar-singh-be/",
-        role: "Sensor Integration",
+        role: "Sensor Integration | Design",
     }
 ];
 
