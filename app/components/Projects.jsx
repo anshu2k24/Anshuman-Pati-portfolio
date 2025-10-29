@@ -75,7 +75,7 @@ export default function Projects() {
     codeLink: "#", // Placeholder
 },
     {
-      name: "Glider",
+      name: "Glider 🏅",
       tech: ["Arduino Uno", "MPU6050", "Li-ion Battery", "SG90 Servo"],
       desc: "An autonomous stabilization system for a model glider, using an MPU6050 for real-time stabilisation of our own designed glider.",
       gradient: "from-pink-400 to-rose-600",
