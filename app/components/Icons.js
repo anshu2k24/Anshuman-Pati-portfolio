@@ -125,3 +125,26 @@ export const RocketLaunchIcon = (props) => ( // Icon for Contribution
     <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9h-9"></path></svg>
 );
 
+// --- New Icons to Add ---
+
+export const CloudRainIcon = (props) => (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" 
+        viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" 
+        className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" 
+            d="M2.25 12a9 9 0 1018 0 9 9 0 00-18 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" 
+            d="M12 6.75a5.25 5.25 0 014.256 8.272l-1.353 1.353m-6.79-4.256a5.25 5.25 0 014.256-4.256M12 21a9 9 0 01-9-9h.083" />
+    </svg>
+);
+
+export const WrenchIcon = (props) => (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" 
+        viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" 
+        className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" 
+            d="M11.523 18.075l-.946 2.067m-2.28-4.595l-1.284 1.285m7.85-2.298l.946-2.067m2.28 4.595l1.284-1.285M12 18a6 6 0 110-12 6 6 0 010 12z" />
+        <path strokeLinecap="round" strokeLinejoin="round" 
+            d="M12 18a6 6 0 110-12 6 6 0 010 12zM12 18a6 6 0 110-12 6 6 0 010 12z" />
+    </svg>
+);

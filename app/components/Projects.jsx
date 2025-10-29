@@ -60,8 +60,8 @@ export default function Projects() {
     },
     {
       name: "PCFR",
-      tech: ["Arduino Uno", "Rain Sensor", "SG90 Servo"],
-      desc: "Project name: 'Proactive Car Front Window Closer' - an IoT solution to automatically close car windows when rain is detected.",
+      tech: ["Arduino Uno", "Rain Sensor", "SG90 Servo", "Rain sensor module"],
+      desc: "Project name: 'Protecting Clothes From Rain' - an IoT solution to automatically turns the cloth drying rod under a roof like cover when rain is detected.",
       gradient: "from-teal-400 to-green-600",
       liveLink: "#",
       codeLink: "#",
