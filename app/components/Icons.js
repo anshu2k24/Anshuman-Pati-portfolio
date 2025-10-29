@@ -103,3 +103,25 @@ export const DatabaseIcon = (props) => (
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 7v10m6-4h4m-4-4h4m-4 8h4M6 4h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2z"></path>
     </svg>
 );
+
+
+export const QuestionMarkCircleIcon = (props) => (
+  <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9.247c.571-.782 1.408-1.258 2.37-1.258 1.42 0 2.57 1.15 2.57 2.57 0 .584-.24 1.12-.66 1.54L9 16h6m-6-8h.01M9 16v.01"></path></svg>
+);
+export const BookOpenIcon = (props) => (
+  <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.75l-6-3m6 3l6-3m-6 3v13.5m-3-6h6"></path></svg>
+);
+export const BrainIcon = (props) => (
+  <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19V6.75a4.5 4.5 0 011.107-2.924L12 3m-2.25 3h-.347c-.987 0-1.89-1.076-1.89-2.25v-.347c0-.987 1.076-1.89 2.25-1.89h.347m-2.25 3H6.75a4.5 4.5 0 00-2.924 1.107L3 12m3.75-6v-.347c0-.987 1.076-1.89 2.25-1.89h.347m-3 3H.347c-.987 0-1.89 1.076-1.89 2.25v.347c0 .987 1.076 1.89 2.25 1.89H6.75m11.25-3v-.347c0-.987-1.076-1.89-2.25-1.89h-.347m3 3h.347c.987 0 1.89 1.076 1.89 2.25v.347c0 .987-1.076 1.89-2.25 1.89H17.25M12 3.75h-.008m-1.5-.75h1.5m-4.5 6h1.5m-3 3h1.5m-1.5 3h1.5m-3 3h1.5m-3 3h1.5m-3 3h1.5m-3 3h1.5M6 17.25v-.347c0-.987 1.076-1.89 2.25-1.89h.347m-3 3H.347c-.987 0-1.89 1.076-1.89 2.25v.347c0 .987 1.076 1.89 2.25 1.89H6.75m11.25-3v-.347c0-.987-1.076-1.89-2.25-1.89h-.347m3 3h.347c.987 0 1.89 1.076 1.89 2.25v.347c0 .987-1.076 1.89-2.25 1.89H17.25M12 3.75h-.008m-1.5-.75h1.5m-4.5 6h1.5m-3 3h1.5m-1.5 3h1.5m-3 3h1.5m-3 3h1.5m-3 3h1.5m-3 3h1.5"></path></svg>
+);
+
+export const CheckBadgeIcon = (props) => ( // Icon for Progress Tracker
+    <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+);
+export const UsersIcon = (props) => ( // Icon for Collaboration
+    <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h-10a4 4 0 01-4-4V7a4 4 0 014-4h10a4 4 0 014 4v9a4 4 0 01-4 4zm-1-9a4 4 0 10-8 0 4 4 0 008 0z"></path></svg>
+);
+export const RocketLaunchIcon = (props) => ( // Icon for Contribution
+    <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9h-9"></path></svg>
+);
+

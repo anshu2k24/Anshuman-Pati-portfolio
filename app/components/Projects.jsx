@@ -52,8 +52,8 @@ export default function Projects() {
     },
     {
       name: "StudyAi",
-      tech: ["React", "TailwindCSS", "Firebase", "Python AI"],
-      desc: "An intelligent study assistant leveraging AI to generate personalized quizzes and summarize study materials. Making students enjoy learning more effectively.",
+      tech: ["React.js", "Node.js", "Tailwind CSS", "MongoDB", "Trained Models", "Firebase (Cloud)"],
+    desc: "Are you tired of juggling endless notes, trying to make sense of mountains of information? StudyAI is here to supercharge your studying and help you study smarter, not harder!",
       gradient: "from-violet-400 to-purple-600",
       liveLink: "#",
       codeLink: "#",

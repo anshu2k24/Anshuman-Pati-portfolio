@@ -3,42 +3,21 @@
 import React, { useState } from 'react';
 import Navigation from "../../components/navigation"; 
 
-
-
-
-
-// --- Custom Icons for StudyAi Features ---
-export const QuestionMarkCircleIcon = ({ className = "w-6 h-6" }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9.247c.571-.782 1.408-1.258 2.37-1.258 1.42 0 2.57 1.15 2.57 2.57 0 .584-.24 1.12-.66 1.54L9 16h6m-6-8h.01M9 16v.01"></path></svg>
-);
-export const BookOpenIcon = ({ className = "w-6 h-6" }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.75l-6-3m6 3l6-3m-6 3v13.5m-3-6h6"></path></svg>
-);
-export const BrainIcon = ({ className = "w-6 h-6" }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19V6.75a4.5 4.5 0 011.107-2.924L12 3m-2.25 3h-.347c-.987 0-1.89-1.076-1.89-2.25v-.347c0-.987 1.076-1.89 2.25-1.89h.347m-2.25 3H6.75a4.5 4.5 0 00-2.924 1.107L3 12m3.75-6v-.347c0-.987 1.076-1.89 2.25-1.89h.347m-3 3H.347c-.987 0-1.89 1.076-1.89 2.25v.347c0 .987 1.076 1.89 2.25 1.89H6.75m11.25-3v-.347c0-.987-1.076-1.89-2.25-1.89h-.347m3 3h.347c.987 0 1.89 1.076 1.89 2.25v.347c0 .987-1.076 1.89-2.25 1.89H17.25M12 3.75h-.008m-1.5-.75h1.5m-4.5 6h1.5m-3 3h1.5m-1.5 3h1.5m-3 3h1.5m-3 3h1.5m-3 3h1.5m-3 3h1.5M6 17.25v-.347c0-.987 1.076-1.89 2.25-1.89h.347m-3 3H.347c-.987 0-1.89 1.076-1.89 2.25v.347c0 .987 1.076 1.89 2.25 1.89H6.75m11.25-3v-.347c0-.987-1.076-1.89-2.25-1.89h-.347m3 3h.347c.987 0 1.89 1.076 1.89 2.25v.347c0 .987-1.076 1.89-2.25 1.89H17.25M12 3.75h-.008m-1.5-.75h1.5m-4.5 6h1.5m-3 3h1.5m-1.5 3h1.5m-3 3h1.5m-3 3h1.5m-3 3h1.5m-3 3h1.5"></path></svg>
-);
-export const DatabaseIcon = ({ className = "w-6 h-6" }) => ( // Icon for Tech Stack/Dependencies
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 7v10m-4-10v10m8-10v10m4-10v10m-4-10v10m8-10v10M8 7H4m-4 0h12m4 0h4M8 17H4m-4 0h12m4 0h4"></path></svg>
-);
-export const CheckBadgeIcon = ({ className = "w-6 h-6" }) => ( // Icon for Progress Tracker
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-);
-export const UsersIcon = ({ className = "w-6 h-6" }) => ( // Icon for Collaboration
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h-10a4 4 0 01-4-4V7a4 4 0 014-4h10a4 4 0 014 4v9a4 4 0 01-4 4zm-1-9a4 4 0 10-8 0 4 4 0 008 0z"></path></svg>
-);
-export const RocketLaunchIcon = ({ className = "w-6 h-6" }) => ( // Icon for Contribution
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9h-9"></path></svg>
-);
-
-export const GitHubIconInternal = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.417 2.865 8.17 6.815 9.492.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.157-1.11-1.468-1.11-1.468-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.359-1.088.65-1.338-2.776-.235-5.594-1.395-5.594-6.233 0-1.381.484-2.515 1.272-3.411-.127-.235-.559-1.625.111-3.384 0 0 1.04-.343 3.425 1.31.998-.275 2.05-.412 3.123-.412.008 0 .017 0 .025 0 1.073 0 2.125.137 3.123.412 2.385-1.653 3.425-1.31 3.425-1.31.67 1.759.248 3.149.127 3.384.787.896 1.272 2.03 1.272 3.411 0 4.848-2.829 5.908-5.609 6.164.368.318.682.946.682 1.903 0 1.381-.013 2.482-.013 2.814 0 .267.182.578.688.482A9.917 9.917 0 0022 12.017C22 6.484 17.523 2 12 2z" clipRule="evenodd" /></svg>;
-export const LinkedInIconInternal = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.528-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.775 7 2.484v6.751z" clipRule="evenodd" /></svg>;
+import {
+QuestionMarkCircleIcon,
+BookOpenIcon,
+  GitHubIcon,
+  BrainIcon,
+  LinkedInIcon,
+  CheckBadgeIcon,
+  UsersIcon,
+  DatabaseIcon,
+} from "../../components/Icons"; 
 
 // --- Project Data ---
 const project = {
     name: "StudyAi",
-    // UPDATED tech stack
     tech: ["React.js", "Node.js", "Tailwind CSS", "MongoDB", "Trained Models", "Firebase (Cloud)"],
-    // UPDATED description to be more general for the hero section
     desc: "Are you tired of juggling endless notes, trying to make sense of mountains of information? StudyAI is here to supercharge your studying and help you study smarter, not harder!",
     gradient: "from-violet-400 to-purple-600",
     liveLink: null,
@@ -137,7 +116,7 @@ const ContributorCard = ({ member, isHighlighted }) => {
                             className="text-slate-600 hover:text-purple-700 transition-colors"
                             title={`${member.name} on GitHub`}
                         >
-                            <GitHubIconInternal className="w-6 h-6" />
+                            <GitHubIcon className="w-6 h-6" />
                         </a>
                     )}
                     {member.linkedin && member.linkedin !== '#' && (
@@ -148,7 +127,7 @@ const ContributorCard = ({ member, isHighlighted }) => {
                             className="text-blue-600 hover:text-purple-700 transition-colors"
                             title={`${member.name} on LinkedIn`}
                         >
-                            <LinkedInIconInternal className="w-6 h-6" />
+                            <LinkedInIcon className="w-6 h-6" />
                         </a>
                     )}
                 </div>
@@ -174,7 +153,7 @@ export default function StudyAiPage() {
                         <span
                             className={`block text-transparent bg-clip-text bg-gradient-to-r ${project.gradient} mt-4`}
                         >
-                            Your Ultimate Study Assistant 🌟🚀
+                            Your Smart Study Assistant
                         </span>
                     </h1>
                     <p className="text-xl text-slate-700 max-w-4xl mx-auto leading-relaxed">
