@@ -53,7 +53,7 @@ export default function Projects() {
     {
       name: "StudyAi",
       tech: ["React", "TailwindCSS", "Firebase", "Python AI"],
-      desc: "An intelligent study assistant leveraging AI to generate personalized quizzes and summarize study materials.",
+      desc: "An intelligent study assistant leveraging AI to generate personalized quizzes and summarize study materials. Making students enjoy learning more effectively.",
       gradient: "from-violet-400 to-purple-600",
       liveLink: "#",
       codeLink: "#",
@@ -160,6 +160,7 @@ export default function Projects() {
                       </span>
                     </a>
                   )}
+                  {project.codeLink !== "#" && (
                   <a
                     href={project.codeLink}
                     target="_blank"
@@ -175,6 +176,7 @@ export default function Projects() {
                       →
                     </span>
                   </a>
+                  )}
                 </div>
               </div>
               <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
