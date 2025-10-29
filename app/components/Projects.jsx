@@ -67,13 +67,13 @@ export default function Projects() {
       codeLink: "#",
     },
     {
-      name: "NeroBot",
-      tech: ["Arduino Uno", "SG90 Servo"],
-      desc: "A custom-built line-following robot using basic components to demonstrate fundamental robotics and control systems.",
-      gradient: "from-indigo-400 to-blue-600",
-      liveLink: "#",
-      codeLink: "#",
-    },
+    name: "NeroBot",
+    tech: ["YOLO (Object Detection)", "OpenCV", "Arduino Uno", "SG90 Servo"],
+    desc: "A custom-built, jellyfish-inspired underwater robot designed to detect and collect marine plastic pollution, demonstrating intelligent perception and basic grasping motion.",
+    gradient: "from-indigo-400 to-blue-600",
+    liveLink: "#", // Placeholder
+    codeLink: "#", // Placeholder
+},
     {
       name: "Glider",
       tech: ["Arduino Uno", "MPU6050", "Li-ion Battery", "SG90 Servo"],
