@@ -28,11 +28,11 @@ export default function Projects() {
     },
     {
       name: "UniTech",
-      tech: ["React", "Firebase", "Node.js"],
-      desc: "A full-stack platform designed to connect university students with tech-related resources, events, and collaboration opportunities.",
+      tech: ["Html", "Css", "js"],
+      desc: "A full-stack platform designed to connect university students with tech as well as non-tech related  events, and collaboration opportunities, be it intra or inter college. Not limiting to only hackathons, we provide a platform for any event possible.",
       gradient: "from-blue-400 to-cyan-600",
       liveLink: "#",
-      codeLink: "#",
+      codeLink: "https://github.com/anshu2k24/ByteXync-Hunter_Squad.git",
     },
     {
       name: "Password Manager",
@@ -135,6 +135,7 @@ export default function Projects() {
                   </a>
 
                   {/* Existing Links, updated to use project data */}
+                  {project.liveLink !== "#" && (
                   <a
                     href={project.liveLink}
                     target="_blank"
@@ -149,7 +150,7 @@ export default function Projects() {
                     <span className="transform group-hover/link:translate-x-1 transition-transform">
                       →
                     </span>
-                  </a>
+                  </a>)}
                   <a
                     href={project.codeLink}
                     target="_blank"

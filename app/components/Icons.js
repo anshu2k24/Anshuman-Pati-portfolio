@@ -48,3 +48,40 @@ export const CheckCircleIcon = (props) => (
       d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
   </svg>
 );
+
+export const UserGroupIcon = (props) => (
+  <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none"
+    viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+    className="w-6 h-6">
+    <path strokeLinecap="round" strokeLinejoin="round"
+      d="M18 14.75c-1.293 0-2.524-.265-3.618-.75M21.75 14.25c-.218-3.078-2.613-5.518-5.618-5.618v.003l-.117.03A12.72 12.72 0 0012 21.75a12.72 12.72 0 00-4.015-.655l-.117-.03v-.004c-3.005.1-5.4.887-5.618 3.965M12 21.75V15M4.5 9.75v1.005m15 0V9.75M8.25 7.5a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0z" />
+  </svg>
+);
+
+export const AcademicCapIcon = (props) => (
+  <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none"
+    viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+    className="w-6 h-6">
+    <path strokeLinecap="round" strokeLinejoin="round"
+      d="M4.26 10.146a60.057 60.057s1.397-.783 2.658-.783h1.011a60.038 60.038 0 0110.142 0h1.011c1.261 0 2.658.783 2.658.783m-15.77 0v7.5A1.125 1.125 0 005.625 18H7.5v.75a.75.75 0 00.75.75h7.5a.75.75 0 00.75-.75v-.75h1.875a1.125 1.125 0 001.125-1.125v-7.5m-15.77 0h15.77m0-3.75a3.75 3.75 0 10-7.5 0 3.75 3.75 0 007.5 0zm-15.77 0h3.75a3.75 3.75 0 017.5 0h3.75m0 0a3.75 3.75 0 10-7.5 0 3.75 3.75 0 007.5 0z" />
+  </svg>
+);
+
+export const CalendarIcon = (props) => (
+  <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none"
+    viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+    className="w-6 h-6">
+    <path strokeLinecap="round" strokeLinejoin="round"
+      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm-3.75 0h.008v.008H8.25V15zm-3.75 0h.008v.008H4.5V15zm0 3.75h.008v.008H4.5V18.75zM12 18.75h.008v.008H12V18.75zM15.75 18.75h.008v.008H15.75V18.75z" />
+  </svg>
+);
+
+export const HeartIcon = (props) => (
+  <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+    viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+    className="w-6 h-6">
+    <path fillRule="evenodd"
+      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.15C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+      clipRule="evenodd" />
+  </svg>
+);
