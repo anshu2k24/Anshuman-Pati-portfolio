@@ -145,7 +145,7 @@ export default function GliderPage() {
 <section id="hero" className="pt-32 pb-18 sm:pt-40 sm:pb-32 text-center relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-6 space-y-8">
         <p className='relative z-10 text-lg bg-rose-100 text-rose-700 font-medium px-4 py-1 rounded-full w-fit mx-auto shadow-sm'>
-            Hackathon Winner: Appreciation Cash Prize 🏆
+            MakerBlitz Hackathon Winner: Appreciation Cash Prize 🏆
         </p>
 
         <h1 className="relative z-10 text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900">
