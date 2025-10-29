@@ -85,3 +85,21 @@ export const HeartIcon = (props) => (
       clipRule="evenodd" />
   </svg>
 );
+
+export const LockClosedIcon = (props) => (
+    <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6-6v4h12v-4m-12 0a2 2 0 012-2h8a2 2 0 012 2m-12 0V9a4 4 0 014-4h4a4 4 0 014 4v2m-6 0h4"></path>
+    </svg>
+);
+
+export const ZapIcon = (props) => (
+    <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+    </svg>
+);
+
+export const DatabaseIcon = (props) => (
+    <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 7v10m6-4h4m-4-4h4m-4 8h4M6 4h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2z"></path>
+    </svg>
+);

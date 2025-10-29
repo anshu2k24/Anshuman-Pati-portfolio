@@ -36,11 +36,19 @@ export default function Projects() {
     },
     {
       name: "Password Manager",
-      tech: ["Python", "Encryption", "Web"],
-      desc: "A secure, desktop-based password management tool using modern encryption standards for robust data protection.",
+      desc: "A secure, web-based app built in Python. It uses Fernet encryption (derived via PBKDF2HMAC) to protect credentials in a CSV file, and integrates the Gemini API to generate unique, personalized usernames.",
+      tech: [
+        "Python",
+        "Pandas",
+        "Cryptography (Fernet/PBKDF2)",
+        "Google Gemini API",
+        "HTML",
+        "Css",
+        "JS"
+      ],
       gradient: "from-orange-400 to-red-600",
       liveLink: "#",
-      codeLink: "#",
+      codeLink: "https://github.com/anshu2k24/Password-Manager",
     },
     {
       name: "StudyAi",
@@ -136,21 +144,22 @@ export default function Projects() {
 
                   {/* Existing Links, updated to use project data */}
                   {project.liveLink !== "#" && (
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-semibold group/link ${
-                      project.liveLink === "#"
-                        ? "opacity-50 pointer-events-none"
-                        : ""
-                    }`}
-                  >
-                    Live Demo
-                    <span className="transform group-hover/link:translate-x-1 transition-transform">
-                      →
-                    </span>
-                  </a>)}
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-semibold group/link ${
+                        project.liveLink === "#"
+                          ? "opacity-50 pointer-events-none"
+                          : ""
+                      }`}
+                    >
+                      Live Demo
+                      <span className="transform group-hover/link:translate-x-1 transition-transform">
+                        →
+                      </span>
+                    </a>
+                  )}
                   <a
                     href={project.codeLink}
                     target="_blank"
