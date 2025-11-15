@@ -5,7 +5,7 @@ export default function Hackathons() {
     {
       event: "CypherQuest Hackathon",
       project: "EcoAi",
-      achievement: "🥇 Appreciation Prize",
+      achievement: "Certificate of Participation",
       tech: ["Tech Event"],
       certificate: true,
       color: "from-yellow-400 to-orange-500",
@@ -16,7 +16,7 @@ export default function Hackathons() {
     {
       event: "MakerBlitz Hackathon",
       project: "Glider",
-      achievement: "Certificate of Participation",
+      achievement: "🥇 Appreciation Prize",
       tech: ["Hardware Event"],
       certificate: true,
       color: "from-blue-400 to-cyan-500",
