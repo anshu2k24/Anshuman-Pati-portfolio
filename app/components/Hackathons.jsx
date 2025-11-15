@@ -3,6 +3,28 @@
 export default function Hackathons() {
   const hackathons = [
     {
+      event: "CodeUtsava 9.0 NIT Raipur",
+      project: "JAR - own everything you generate using AI",
+      achievement: "Certificate of Participation",
+      tech: ["National Level","Tech Event","Problem Solving", "Team Project"],
+      certificate: false,
+      color: "from-red-400 to-orange-500",
+      certificateLink: "#",
+      githubLink: "#",
+      demoLink: "https://brahmacoders.vercel.app/"
+    },
+    {
+      event: "Hackman V8",
+      project: "Hackman V8 Volunteer",
+      achievement: "",
+      tech: ["Volunteer","Tech Event","Management", "Organising"],
+      certificate: false,
+      color: "from-green-400 to-violet-500",
+      certificateLink: "#",
+      githubLink: "#",
+      demoLink:"#"
+    },
+    {
       event: "CypherQuest Hackathon",
       project: "EcoAi",
       achievement: "Certificate of Participation",
@@ -79,6 +101,7 @@ export default function Hackathons() {
       githubLink: "#",
       demoLink: "https://hackman.dsce.in/"
     },
+    
   ];
 
   return (
