@@ -487,7 +487,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-6 items-center justify-center mb-12">
               <a
                 ref={buttonRef}
-                href="https://drive.google.com/file/d/19MGI9WudPmYDgX3LTtQbf39hdxRf7Y1D/view"
+                href="https://drive.google.com/file/d/1RnIqBVgZVwdggW-F7mnALrOVZWzNRGnX/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-blue-700 to-purple-700 text-white font-extrabold text-lg rounded-xl shadow-xl hover:shadow-2xl hover:shadow-purple-700/50 transition-all duration-300 transform"
