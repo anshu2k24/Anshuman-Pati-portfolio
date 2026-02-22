@@ -6,7 +6,7 @@ export default function Hackathons() {
       event: "CodeUtsava 9.0 NIT Raipur",
       project: "JAR - own everything you generate using AI",
       achievement: "Certificate of Participation",
-      tech: ["National Level","Tech Event","Problem Solving", "Team Project"],
+      tech: ["National Level", "Tech Event", "Problem Solving", "Team Project"],
       certificate: false,
       color: "from-red-400 to-orange-500",
       certificateLink: "#",
@@ -17,12 +17,23 @@ export default function Hackathons() {
       event: "Hackman V8",
       project: "Hackman V8 Volunteer",
       achievement: "",
-      tech: ["Volunteer","Tech Event","Management", "Organising"],
+      tech: ["Volunteer", "Tech Event", "Management", "Organising"],
       certificate: false,
       color: "from-green-400 to-violet-500",
       certificateLink: "#",
       githubLink: "#",
-      demoLink:"#"
+      demoLink: "#"
+    },
+    {
+      event: "Recursive V2",
+      project: "VIP Chakra - VIP threat detection system",
+      achievement: "Certificate of Participation",
+      tech: ["National Level", "Tech Event", "Problem Solving", "Team Project"],
+      certificate: false,
+      color: "from-yellow-400 to-orange-500",
+      certificateLink: "#",
+      githubLink: "#",
+      demoLink: "#"
     },
     {
       event: "CypherQuest Hackathon",
@@ -101,7 +112,7 @@ export default function Hackathons() {
       githubLink: "#",
       demoLink: "https://hackman.dsce.in/"
     },
-    
+
   ];
 
   return (
@@ -168,17 +179,17 @@ export default function Hackathons() {
                 </div>
                 <div className="flex gap-4 text-sm">
                   {hackathon.githubLink !== "#" && (
-                  <a
-                    href={hackathon.githubLink}
-                    className="flex items-center gap-1 text-blue-600 hover:text-blue-700 font-semibold group/link"
-                  >
-                    View Project
-                    <span className="transform group-hover/link:translate-x-1 transition-transform">
-                      →
-                    </span>
-                  </a>
+                    <a
+                      href={hackathon.githubLink}
+                      className="flex items-center gap-1 text-blue-600 hover:text-blue-700 font-semibold group/link"
+                    >
+                      View Project
+                      <span className="transform group-hover/link:translate-x-1 transition-transform">
+                        →
+                      </span>
+                    </a>
                   )}
-                  {hackathon.certificate && hackathon.certificateLink!=="#" && (
+                  {hackathon.certificate && hackathon.certificateLink !== "#" && (
                     <a
                       href={hackathon.certificateLink}
                       className="flex items-center gap-1 text-purple-600 hover:text-purple-700 font-semibold group/link"
@@ -189,7 +200,7 @@ export default function Hackathons() {
                       </span>
                     </a>
                   )}
-                  {hackathon.demoLink!=="#" && (
+                  {hackathon.demoLink !== "#" && (
                     <a
                       href={hackathon.demoLink}
                       className="flex items-center gap-1 text-red-600 hover:text-red-700 font-semibold group/link"

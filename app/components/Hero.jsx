@@ -191,19 +191,19 @@ export default function Hero() {
     },
     {
       icon: <svg
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          width="100"
-          height="100"
-          viewBox="0 0 48 48"
-        >
-          <path
-            fill="#00acc1"
-            d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"
-          ></path>
-        </svg>,
-      name: 
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="100"
+        height="100"
+        viewBox="0 0 48 48"
+      >
+        <path
+          fill="#00acc1"
+          d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"
+        ></path>
+      </svg>,
+      name:
         "Tailwindcss"
       ,
       size: "text-4xl",
@@ -440,7 +440,7 @@ export default function Hero() {
             {/* Subtitle with Floating Effect */}
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-700 to-blue-700">
-                <FloatingText text="Full Stack Developer" />
+                <FloatingText text="ML Engineer | Full Stack Developer" />
               </span>
             </h2>
 
@@ -465,7 +465,7 @@ export default function Hero() {
               <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-700 to-orange-700">
                 user-centric
               </span>{" "}
-              web experiences that make a difference.
+              ML & web experiences that make a difference.
             </p>
 
             {/* Tech Stack Pills */}
@@ -553,15 +553,15 @@ export default function Hero() {
             <div className="grid grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
               {[
                 { number: "10+", label: "Projects" },
-                { number: "6+", label: "Hackathons"},
-                { number: "18+", label: "Technologies"},
+                { number: "6+", label: "Hackathons" },
+                { number: "18+", label: "Technologies" },
               ].map((stat, index) => (
                 <div
                   key={index}
                   className="group text-center p-6 rounded-2xl bg-white shadow-xl shadow-gray-200/50 border border-gray-100 hover:bg-blue-50/50 hover:border-blue-200 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-blue-300/50 animate-fade-in-up"
                   style={{ animationDelay: `${0.5 + index * 0.1}s` }}
                 >
-                  
+
                   <div className="text-3xl sm:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-purple-700 mb-2">
                     {stat.number}
                   </div>
