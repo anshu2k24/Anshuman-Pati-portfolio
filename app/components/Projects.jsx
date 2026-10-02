@@ -19,6 +19,21 @@ export default function Projects() {
       codeLink: "https://github.com/anshu2k24/enhanced-prompt", // Example link
     },
     {
+      name: "Shatru",
+      tech: ["Python", "Phi-3-mini", "Shannon Entropy"],
+      desc: "Runtime backdoor detection engine for LLMs monitoring Shannon Entropy distributions across layers 6-18 of Phi-3-mini to fingerprint Trojan activation patterns. Detects poisoned models on trigger input without access to training data or model weights - a novel black-box approach to LLM supply-chain security.",
+      gradient: "from-cyan-400 to-blue-600",
+      liveLink: "#",
+      codeLink: "https://github.com/anshu2k24/shatru",
+    },
+    {
+      name: "Gani",
+      tech: ["YOLOv8", "ESP32", "Next.js", "Python"],
+      desc: "IoT and ML early-warning platform for rockfall prediction in open-pit mines, fusing live vibration, tilt, and seismic sensor data from ESP32 hardware with YOLOv8 visual detection. Built with severity-tiered alerts (Low, Medium, Critical) and real-time sensor telemetry; selected for Smart India Hackathon 2025.",
+      gradient: "from-teal-400 to-cyan-600",
+      liveLink: "#",
+      codeLink: "https://github.com/anshu2k24/gani",
+    },    {
       name: "Rock, Paper, and Scissor",
       tech: ["YOLOv8", "OpenCV", "PyTorch", "NumPy", "Pandas"],
       desc: "A YOLOv8-powered vision system for real-time Rock–Paper–Scissors gesture recognition, built with Python and OpenCV.",
