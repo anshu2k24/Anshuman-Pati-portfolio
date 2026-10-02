@@ -1,31 +1,31 @@
+"use client";
+
+import { useState } from "react";
+import Navigation from "./components/navigation";
 import Hero from "./components/Hero";
-import TechStack from "./components/TechStack";
+import About from "./components/About";
 import Projects from "./components/Projects";
-import Hackathons from "./components/Hackathons";
-import Socials from "./components/Socials";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import Publications from "./components/Publications";
-import Honors from "./components/Honors";
-import Leadership from "./components/Leadership";
-import About from "./components/About";
+import Talks from "./components/Talks";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className="min-h-screen bg-white text-[#111111]">
-      
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Publications />
-      <TechStack />
-      <Honors />
-      <Hackathons />
-      <Leadership />
-      <Socials />
-      <Contact />
+    <div className="min-h-screen bg-[#FAFAF8] text-[#121212]">
+      <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Experience />
+        <Publications />
+        <Talks />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );

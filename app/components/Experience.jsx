@@ -1,63 +1,65 @@
-"use client";
-
 import { experience } from "../data/experience";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-4">
-            <span className="text-[#0F0F0F]">
+    <section id="experience" className="border-t border-neutral-200/80 py-20 bg-white">
+      <div className="max-w-5xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="flex items-baseline justify-between border-b border-neutral-200 pb-4 mb-12">
+          <div className="flex items-center gap-3">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900">
               Experience
+            </h2>
+            <span className="font-hand text-xl text-blue-600">
+              roles and research work
             </span>
-          </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Professional experience and research work
-          </p>
+          </div>
+          <span className="text-xs font-mono text-neutral-400">Experience</span>
         </div>
+
         <div className="space-y-8">
           {experience.map((exp, index) => (
             <div
               key={index}
-              className="group relative bg-white p-0 hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] border border-gray-200/50 overflow-hidden"
+              className="border border-neutral-200 rounded-2xl bg-white p-6 sm:p-8 shadow-xs hover:border-neutral-300 transition-all"
             >
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#111111]"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
-              <div className="relative p-6 sm:p-8">
-                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2 text-gray-900 transition-all">
-                      {exp.role}
-                    </h3>
-                    <p className="text-lg font-semibold text-[#111111] mb-1">
-                      {exp.company}
-                    </p>
-                    <p className="text-sm text-gray-500 mb-4">
-                      {exp.duration} • {exp.location} • {exp.type}
-                    </p>
-                  </div>
+              <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-4 border-b border-neutral-100 pb-4 mb-6">
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-neutral-900">
+                    {exp.role}
+                  </h3>
+                  <p className="text-sm font-semibold text-blue-700 mt-0.5">
+                    {exp.company}
+                  </p>
                 </div>
-                <ul className="space-y-3 mb-6">
-                  {exp.bullets.map((bullet, i) => (
-                    <li key={i} className="flex items-start gap-3 text-gray-700 leading-relaxed">
-                      <span className="mt-1 w-2 h-2 rounded-full bg-[#111111] shrink-0"></span>
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex flex-wrap gap-2">
-                  {exp.tech.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="border border-[#F0F0F0] bg-white text-[#5F5F5F] px-3 py-1 rounded-full text-xs font-medium transition-colors"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+
+                <div className="flex items-center gap-2 text-xs font-mono text-neutral-500">
+                  <span className="px-2.5 py-1 bg-neutral-100 rounded-md font-medium text-neutral-800">
+                    {exp.duration}
+                  </span>
+                  <span>·</span>
+                  <span>{exp.location}</span>
                 </div>
+              </div>
+
+              <ul className="space-y-2.5 mb-6 text-sm text-neutral-700 leading-relaxed">
+                {exp.bullets.map((bullet, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <span className="text-neutral-400 select-none">•</span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex flex-wrap gap-2 pt-2 border-t border-neutral-100">
+                {exp.tech.map((t) => (
+                  <span
+                    key={t}
+                    className="text-xs font-medium bg-neutral-100 text-neutral-700 rounded-md px-2.5 py-1"
+                  >
+                    {t}
+                  </span>
+                ))}
               </div>
             </div>
           ))}

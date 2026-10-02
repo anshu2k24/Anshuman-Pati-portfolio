@@ -1,2 +1,20 @@
 @import "tailwindcss";
 
+@layer base {
+  body {
+    background-color: #FAFAF9;
+    color: #0F172A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  }
+
+  ::selection {
+    background-color: #0F172A;
+    color: #FAFAF9;
+  }
+}
+
+.font-hand {
+  font-family: var(--font-handwritten), cursive;
+}
