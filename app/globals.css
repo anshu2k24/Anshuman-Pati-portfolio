@@ -1,2 +1,40 @@
 @import "tailwindcss";
 
+@layer base {
+  body {
+    background-color: #FAFAF9;
+    color: #0F172A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  }
+
+  ::selection {
+    background-color: #0F172A;
+    color: #FAFAF9;
+  }
+}
+
+.font-hand {
+  font-family: var(--font-handwritten), cursive;
+}
+
+@keyframes continuous-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-continuous-marquee {
+  display: flex;
+  width: max-content;
+  animation: continuous-marquee 32s linear infinite;
+}
+
+.animate-continuous-marquee:hover {
+  animation-play-state: paused;
+}
+

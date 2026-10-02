@@ -1,72 +1,226 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [contactForm, setContactForm] = useState({ name: "", email: "", msg: "" });
-  const [suggestionForm, setSuggestionForm] = useState({ name: "", suggested: "" });
+  const [honeypot, setHoneypot] = useState("");
   const [contactStatus, setContactStatus] = useState("");
-  const [suggestionStatus, setSuggestionStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleContactSubmit = async (e) => {
     e.preventDefault();
-    setContactStatus("Sending...");
-    try {
-      const response = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(contactForm) });
-      if (response.ok) {
-        setContactStatus("Message sent successfully!");
-        setContactForm({ name: "", email: "", msg: "" });
-      } else setContactStatus("Failed to send message.");
-    } catch (error) { setContactStatus("Error sending message."); }
-    setTimeout(() => setContactStatus(""), 3000);
-  };
 
-  const handleSuggestionSubmit = async (e) => {
-    e.preventDefault();
-    setSuggestionStatus("Sending...");
+    // Anti-spam bot trap (honeypot check)
+    if (honeypot) {
+      setContactStatus("Message sent successfully.");
+      setContactForm({ name: "", email: "", msg: "" });
+      return;
+    }
+
+    const trimmedName = contactForm.name.trim();
+    const trimmedEmail = contactForm.email.trim();
+    const trimmedMsg = contactForm.msg.trim();
+
+    // Input boundary validation
+    if (!trimmedName || trimmedName.length > 100) {
+      setContactStatus("Please enter a valid name (max 100 characters).");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!trimmedEmail || !emailRegex.test(trimmedEmail) || trimmedEmail.length > 100) {
+      setContactStatus("Please enter a valid email address.");
+      return;
+    }
+
+    if (!trimmedMsg || trimmedMsg.length < 5 || trimmedMsg.length > 2000) {
+      setContactStatus("Message must be between 5 and 2000 characters.");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setContactStatus("Sending message...");
+
     try {
-      const response = await fetch("/api/suggestion", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(suggestionForm) });
-      if (response.ok) {
-        setSuggestionStatus("Suggestion sent successfully!");
-        setSuggestionForm({ name: "", suggested: "" });
-      } else setSuggestionStatus("Failed to send suggestion.");
-    } catch (error) { setSuggestionStatus("Error sending suggestion."); }
-    setTimeout(() => setSuggestionStatus(""), 3000);
+      const templateParams = {
+        from_name: trimmedName,
+        from_email: trimmedEmail,
+        message: trimmedMsg,
+      };
+
+      const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_5y95k4w";
+      const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_p98h7ub";
+      const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "hs2945Z9nOv5GNxKX";
+
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+
+      setContactStatus("Message delivered successfully.");
+      setContactForm({ name: "", email: "", msg: "" });
+    } catch {
+      setContactStatus("Failed to send message. Please reach out directly via email or LinkedIn.");
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setContactStatus(""), 6000);
+    }
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-gray-50 via-blue-50/20 to-purple-50/20 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-4">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">Get In Touch</span>
-          </h2>
-          <p className="text-gray-600 text-lg">I'd love to hear from you!</p>
-        </div>
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-500">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-t-2xl"></div>
-            <h3 className="text-2xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">Send me a message</h3>
-            <form onSubmit={handleContactSubmit} className="space-y-6">
-              <div><label className="block text-sm font-semibold mb-2 text-gray-700">Name</label><input type="text" required value={contactForm.name} onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })} className="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-400 transition-all duration-300" placeholder="Your name" /></div>
-              <div><label className="block text-sm font-semibold mb-2 text-gray-700">Email</label><input type="email" required value={contactForm.email} onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })} className="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-400 transition-all duration-300" placeholder="your.email@example.com" /></div>
-              <div><label className="block text-sm font-semibold mb-2 text-gray-700">Message</label><textarea required rows="4" value={contactForm.msg} onChange={(e) => setContactForm({ ...contactForm, msg: e.target.value })} className="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none text-gray-900 placeholder-gray-400 transition-all duration-300" placeholder="Your message..." /></div>
-              <button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 py-3 rounded-xl font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">Send Message</button>
-              {contactStatus && <div className={`text-center text-sm font-semibold p-3 rounded-lg ${contactStatus.includes("successfully") ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>{contactStatus}</div>}
-            </form>
+    <section id="contact" className="border-t border-neutral-200/80 py-20 bg-[#FAFAF9]">
+      <div className="max-w-5xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="flex items-baseline justify-between border-b border-neutral-200 pb-4 mb-12">
+          <div className="flex items-center gap-3">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900">
+              Get in Touch
+            </h2>
+            <span className="font-hand text-2xl text-blue-600">
+              say hello or propose a project
+            </span>
           </div>
-          {/* Suggestion Form */}
-          <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-500">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-600 rounded-t-2xl"></div>
-            <h3 className="text-2xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">Share a suggestion</h3>
-            <form onSubmit={handleSuggestionSubmit} className="space-y-6">
-              <div><label className="block text-sm font-semibold mb-2 text-gray-700">Name</label><input type="text" required value={suggestionForm.name} onChange={(e) => setSuggestionForm({ ...suggestionForm, name: e.target.value })} className="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-900 placeholder-gray-400 transition-all duration-300" placeholder="Your name" /></div>
-              <div><label className="block text-sm font-semibold mb-2 text-gray-700">Suggestion</label><textarea required rows="6" value={suggestionForm.suggested} onChange={(e) => setSuggestionForm({ ...suggestionForm, suggested: e.target.value })} className="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none text-gray-900 placeholder-gray-400 transition-all duration-300" placeholder="Share your ideas, feedback, or suggestions..." /></div>
-              <button type="submit" className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 py-3 rounded-xl font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">Share Suggestion</button>
-              {suggestionStatus && <div className={`text-center text-sm font-semibold p-3 rounded-lg ${suggestionStatus.includes("successfully") ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>{suggestionStatus}</div>}
+          <span className="text-sm font-mono text-neutral-400">Contact</span>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          {/* Direct Channels & Info */}
+          <div className="lg:col-span-5 space-y-6">
+            <p className="text-lg sm:text-xl text-neutral-700 leading-relaxed">
+              I am open to discussions on machine learning research, software engineering roles,
+              and applied systems engineering.
+            </p>
+
+            <div className="border border-neutral-200 rounded-2xl bg-white p-6 sm:p-7 shadow-xs space-y-5">
+              <span className="text-xs font-mono uppercase tracking-wider text-neutral-500 block font-medium">
+                Direct Channels
+              </span>
+
+              <div>
+                <span className="text-xs text-neutral-500 block mb-1">Email</span>
+                <a
+                  href="mailto:anshu799pati@gmail.com"
+                  className="text-base font-semibold text-neutral-900 hover:text-blue-600 transition-colors"
+                >
+                  anshu799pati@gmail.com
+                </a>
+              </div>
+
+              <div className="pt-4 border-t border-neutral-100 flex gap-5 text-sm font-medium">
+                <a
+                  href="https://github.com/anshu2k24"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-700 hover:text-neutral-900 underline underline-offset-4"
+                >
+                  GitHub →
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/anshu2k24"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-700 hover:text-neutral-900 underline underline-offset-4"
+                >
+                  LinkedIn →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Form */}
+          <div className="lg:col-span-7">
+            <form
+              onSubmit={handleContactSubmit}
+              className="border border-neutral-200 rounded-2xl bg-white p-6 sm:p-8 shadow-xs space-y-5"
+            >
+              <div className="flex items-center justify-between border-b border-neutral-100 pb-3 mb-2">
+                <span className="text-xs font-mono uppercase tracking-wider text-neutral-500 font-medium">
+                  Send a Direct Message
+                </span>
+                <span className="font-hand text-lg text-blue-600">
+                  reply within 24 hours
+                </span>
+              </div>
+
+              {/* Anti-bot honeypot */}
+              <div className="hidden" aria-hidden="true" style={{ display: "none" }}>
+                <label htmlFor="hp_field">Leave this empty</label>
+                <input
+                  id="hp_field"
+                  type="text"
+                  name="_honey"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-neutral-700 mb-1.5">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  required
+                  maxLength={100}
+                  value={contactForm.name}
+                  onChange={(e) =>
+                    setContactForm({ ...contactForm, name: e.target.value })
+                  }
+                  className="w-full bg-[#FAFAF9] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-900 focus:bg-white transition-all"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-neutral-700 mb-1.5">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  required
+                  maxLength={100}
+                  value={contactForm.email}
+                  onChange={(e) =>
+                    setContactForm({ ...contactForm, email: e.target.value })
+                  }
+                  className="w-full bg-[#FAFAF9] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-900 focus:bg-white transition-all"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-neutral-700 mb-1.5">
+                  Message
+                </label>
+                <textarea
+                  required
+                  rows={4}
+                  maxLength={2000}
+                  value={contactForm.msg}
+                  onChange={(e) =>
+                    setContactForm({ ...contactForm, msg: e.target.value })
+                  }
+                  className="w-full bg-[#FAFAF9] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-900 focus:bg-white resize-none transition-all"
+                  placeholder="Tell me about your project, idea, or role..."
+                />
+              </div>
+
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="inline-flex items-center justify-center bg-neutral-900 text-white px-8 py-3.5 text-base font-medium rounded-xl hover:bg-neutral-800 transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </button>
+
+                {contactStatus && (
+                  <span className="text-sm font-medium text-blue-700">
+                    {contactStatus}
+                  </span>
+                )}
+              </div>
             </form>
           </div>
         </div>

@@ -59,13 +59,11 @@ export default function Honors() {
   ];
 
   return (
-    <section id="honors" className="py-24 bg-gradient-to-br from-gray-50 to-purple-50/30 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-200/20 rounded-full blur-3xl"></div>
+    <section id="honors" className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-extrabold mb-4">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+            <span className="text-[#111111]">
               Honors & Awards
             </span>
           </h2>
@@ -77,17 +75,17 @@ export default function Honors() {
           {honors.map((honor, index) => (
             <div
               key={index}
-              className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-gray-200/50 overflow-hidden"
+              className="group relative bg-white p-0 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-gray-200/50 overflow-hidden"
             >
               <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${honor.color}`}></div>
               <div className={`absolute inset-0 bg-gradient-to-br ${honor.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
-              <div className="relative">
+              <div className="relative p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-1 text-gray-900 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 transition-all">
+                    <h3 className="text-xl font-bold mb-1 text-gray-900 transition-all">
                       {honor.title}
                     </h3>
-                    <p className={`text-transparent bg-clip-text bg-gradient-to-r ${honor.color} font-semibold text-sm`}>
+                    <p className="text-[#111111] font-semibold text-sm">
                       {honor.subtitle}
                     </p>
                   </div>
@@ -99,7 +97,7 @@ export default function Honors() {
                   {honor.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 px-2 py-1 rounded-full text-xs font-medium hover:from-gray-200 hover:to-gray-300 transition-all"
+                      className="border border-[#F0F0F0] bg-white text-[#5F5F5F] px-2 py-1 rounded-full text-xs font-medium transition-colors"
                     >
                       {tech}
                     </span>
