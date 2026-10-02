@@ -28,7 +28,7 @@ export default function About() {
                   alt="Anshuman Pati at Dayananda Sagar Institutions podium"
                   fill
                   sizes="(max-width: 1024px) 100vw, 360px"
-                  className="object-cover object-[center_15%]"
+                  className="object-cover object-[center_12%] scale-[1.65] origin-[center_16%] transition-transform duration-300"
                   priority
                 />
               </div>
