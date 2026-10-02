@@ -33,7 +33,7 @@ export default function About() {
                 />
               </div>
               <p className="text-xs text-neutral-500 text-center">
-                Dayananda Sagar Institutions · Department Assembly
+                Dayananda Sagar Institutions
               </p>
             </div>
 
