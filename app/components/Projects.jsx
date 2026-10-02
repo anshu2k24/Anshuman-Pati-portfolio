@@ -5,13 +5,13 @@ const FEATURED_PROJECTS = [
     name: "Shatru",
     year: "2026",
     slug: "shatru",
-    award: "1st Place Winner, Altaria v1.0 (Cyber & AI Track)",
+    award: "1st Place, Altaria v1.0 (Cyber & AI Track)",
     tagline: "Runtime Backdoor Detection Engine for LLMs",
-    desc: "A black-box runtime backdoor detection engine for large language models built in 24 hours. Shatru monitors layerwise Shannon Entropy distributions across layers 6 to 18 in Phi-3-mini to detect Trojan activation spikes without access to model weights or pre-training datasets.",
-    stack: ["Python", "Phi-3-mini", "Shannon Entropy", "PyTorch"],
-    note: "built in 24 hours sprint, 1st place",
+    desc: "A black-box runtime backdoor detection engine for large language models built in a 24-hour sprint. Shatru monitors layerwise Shannon Entropy distributions across layers 6 to 18 in Phi-3-mini to detect Trojan activation spikes without access to model weights or pre-training datasets.",
+    stack: ["Python", "Phi-3-mini", "Shannon Entropy", "PyTorch", "Transformers"],
+    note: "24hr hackathon sprint · 1st place",
     codeLink: "https://github.com/anshu2k24/shatru",
-    imageSlot: "Architecture and Entropy Distribution Visual",
+    isAnchor: false,
   },
   {
     name: "Gani",
@@ -20,23 +20,22 @@ const FEATURED_PROJECTS = [
     award: "Selected, Smart India Hackathon 2025",
     tagline: "IoT & Computer Vision Early-Warning Platform for Mine Safety",
     desc: "Predicts and detects rockfalls in open-pit mines by fusing live vibration, tilt, and seismic telemetry from ESP32 microcontroller arrays with YOLOv8 visual detection into a Next.js multi-role dashboard with severity-tiered alerts.",
-    stack: ["YOLOv8", "ESP32", "Next.js", "Python", "OpenCV"],
-    note: "hardware and CV sensor fusion",
+    stack: ["YOLOv8", "ESP32", "Next.js", "Python", "OpenCV", "IoT"],
+    note: "hardware & CV sensor fusion",
     codeLink: "https://github.com/anshu2k24/gani",
-    imageSlot: "Hardware & Dashboard Preview Visual",
+    isAnchor: false,
   },
   {
     name: "Drishti Scene Collector",
     year: "2026",
     slug: "writing",
-    isAnchor: true,
-    award: "Published at IEEE TEMSCON-ASPAC 2026",
-    tagline: "Real-time AI Surveillance System for Campus Safety",
-    desc: "Autonomous computer vision surveillance engine processing live campus RTSP feeds to detect collapses, falls, fights, and crowd formation. Multi-model YOLOv8 pipeline sustaining 22 to 25 FPS on a laptop RTX 3050 GPU with Supabase forensic logging.",
+    award: "IEEE TEMSCON-ASPAC 2026 (Forthcoming)",
+    tagline: "Autonomous Real-Time AI Surveillance System for Campus Safety",
+    desc: "Autonomous computer vision surveillance engine processing live campus RTSP feeds to detect medical collapses, falls, fights, and crowd formation. Multi-model YOLOv8 pipeline sustaining 22 to 25 FPS on a laptop RTX 3050 GPU with Supabase forensic logging.",
     stack: ["YOLOv8", "RTSP", "Computer Vision", "Supabase", "Python"],
-    note: "primary author, published IEEE research",
+    note: "primary author · forthcoming IEEE research",
     codeLink: "#",
-    imageSlot: "25 FPS Video Pipeline Visual",
+    isAnchor: true,
   },
 ];
 
@@ -44,64 +43,57 @@ const OTHER_PROJECTS = [
   {
     name: "EcoAi",
     year: "2024",
-    slug: "ecoai",
-    award: "CypherQuest Hackathon",
-    desc: "Prompt efficiency optimization tool designed to reduce token consumption and carbon footprint in conversational AI.",
-    stack: "Next.js · Prompt Optimization · AI",
+    context: "CypherQuest Hackathon",
+    desc: "Prompt efficiency optimization tool designed to reduce token consumption and carbon footprint in conversational AI models.",
+    stack: ["Next.js", "Prompt Optimization", "LLM APIs"],
     codeLink: "https://github.com/anshu2k24/enhanced-prompt",
   },
   {
     name: "Rock, Paper, and Scissors",
     year: "2024",
-    slug: "rock-paper-and-scissor",
-    award: null,
-    desc: "Real-time hand gesture recognition system built with YOLOv8 and OpenCV, fine-tuned on Kaggle dataset.",
-    stack: "YOLOv8 · OpenCV · PyTorch · Python",
+    context: "Computer Vision",
+    desc: "Real-time hand gesture recognition system built with YOLOv8 and OpenCV, fine-tuned on custom augmented gesture datasets.",
+    stack: ["YOLOv8", "OpenCV", "PyTorch", "Python"],
     codeLink: "https://github.com/anshu2k24/rock-paper-scissors",
   },
   {
     name: "UniTech",
     year: "2024",
-    slug: "unitech",
-    award: "ByteXync Hackathon",
-    desc: "Campus collaboration and event directory platform connecting students for hackathons and inter-college contests.",
-    stack: "JavaScript · HTML5 · CSS3",
+    context: "ByteXync Hackathon",
+    desc: "Campus collaboration and event directory platform connecting students for hackathons, workshops, and inter-college contests.",
+    stack: ["JavaScript", "HTML5", "CSS3", "Node.js"],
     codeLink: "https://github.com/anshu2k24/ByteXync-Hunter_Squad.git",
   },
   {
     name: "Password Manager",
     year: "2024",
-    slug: "password-manager",
-    award: null,
+    context: "Security & Crypto",
     desc: "Desktop credential management tool utilizing Fernet symmetric encryption derived via PBKDF2HMAC with Google Gemini integration.",
-    stack: "Python · Cryptography (Fernet) · Pandas",
+    stack: ["Python", "Cryptography", "Pandas"],
     codeLink: "https://github.com/anshu2k24/Password-Manager",
   },
   {
     name: "Glider",
     year: "2024",
-    slug: "glider",
-    award: "Appreciation Prize, MakerBlitz",
-    desc: "Autonomous stabilization system for a physical model glider, utilizing an MPU6050 6-axis IMU for pitch/roll correction.",
-    stack: "Arduino Uno · MPU6050 · SG90 Servo",
+    context: "Appreciation Prize, MakerBlitz",
+    desc: "Autonomous stabilization system for a physical model glider, utilizing an MPU6050 6-axis IMU for real-time pitch and roll correction.",
+    stack: ["Arduino Uno", "MPU6050", "SG90 Servo"],
     codeLink: "#",
   },
   {
     name: "NeroBot",
     year: "2024",
-    slug: "nerobot",
-    award: null,
-    desc: "Jellyfish-inspired underwater robot designed for marine plastic pollution detection and grasping with computer vision.",
-    stack: "YOLO · OpenCV · Arduino Uno",
+    context: "Marine Robotics",
+    desc: "Jellyfish-inspired underwater robot designed for marine plastic pollution detection and grasping with computer vision inference.",
+    stack: ["YOLO", "OpenCV", "Arduino Uno"],
     codeLink: "#",
   },
   {
     name: "PCFR",
     year: "2024",
-    slug: "pcfr",
-    award: null,
+    context: "IoT Automation",
     desc: "Automated weather protection IoT mechanism that retracts outdoor clothes-drying racks under shelter upon rain detection.",
-    stack: "Arduino Uno · Rain Sensor · SG90 Servo",
+    stack: ["Arduino Uno", "Rain Sensor", "SG90 Servo"],
     codeLink: "#",
   },
 ];
@@ -114,163 +106,159 @@ export default function Projects() {
         {/* Section Header */}
         <div className="flex items-baseline justify-between border-b border-neutral-200 pb-4 mb-12">
           <div className="flex items-center gap-3">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900">
               Featured Systems
             </h2>
-            <span className="font-hand text-xl text-blue-600">
-              selected works and prototypes
+            <span className="font-hand text-2xl text-blue-600">
+              flagship works and prototypes
             </span>
           </div>
-          <span className="text-xs font-mono text-neutral-400">Work</span>
+          <span className="text-sm font-mono text-neutral-400">Work</span>
         </div>
 
-        {/* Featured Projects Cards with Soft Rounded Corners */}
-        <div className="space-y-10 mb-16">
+        {/* Featured Projects Cards */}
+        <div className="space-y-8 mb-20">
           {FEATURED_PROJECTS.map((project) => (
             <div
               key={project.name}
-              className="border border-neutral-200 rounded-2xl bg-white p-6 sm:p-8 shadow-xs hover:border-neutral-300 transition-all"
+              className="border border-neutral-200 rounded-2xl bg-white p-7 sm:p-9 shadow-xs hover:border-neutral-300 transition-all space-y-5"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                {/* Left: Text & Info */}
-                <div className="lg:col-span-7 space-y-4">
-                  <div className="flex flex-wrap items-center gap-2.5">
-                    <span className="text-xs font-mono text-neutral-500">
-                      {project.year}
-                    </span>
-                    <span className="text-xs font-medium text-blue-700 bg-blue-50 border border-blue-100 rounded-full px-3 py-0.5">
-                      {project.award}
-                    </span>
-                    <span className="font-hand text-lg text-blue-600 ml-auto">
-                      {project.note}
-                    </span>
-                  </div>
-
-                  <h3 className="text-2xl font-bold text-neutral-900 tracking-tight">
-                    {project.name}
-                  </h3>
-
-                  <p className="text-sm font-medium text-neutral-500">
-                    {project.tagline}
-                  </p>
-
-                  <p className="text-sm text-neutral-600 leading-relaxed">
-                    {project.desc}
-                  </p>
-
-                  {/* Stack Badges (Soft Pills) */}
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    {project.stack.map((tech) => (
-                      <span
-                        key={tech}
-                        className="text-xs font-medium bg-neutral-100 text-neutral-700 rounded-md px-2.5 py-1"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Rounded Action Buttons */}
-                  <div className="flex items-center gap-3 pt-3">
-                    {project.isAnchor ? (
-                      <a
-                        href={`#${project.slug}`}
-                        className="inline-flex items-center text-xs font-medium bg-neutral-900 text-white px-4 py-2 rounded-lg hover:bg-neutral-800 transition-all shadow-xs"
-                      >
-                        Read Research Paper
-                      </a>
-                    ) : (
-                      <Link
-                        href={`/projects/${project.slug}`}
-                        className="inline-flex items-center text-xs font-medium bg-neutral-900 text-white px-4 py-2 rounded-lg hover:bg-neutral-800 transition-all shadow-xs"
-                      >
-                        Project Case Study
-                      </Link>
-                    )}
-
-                    {project.codeLink !== "#" && (
-                      <a
-                        href={project.codeLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-xs font-medium bg-white text-neutral-700 border border-neutral-300 px-4 py-2 rounded-lg hover:border-neutral-900 hover:text-neutral-900 transition-all shadow-xs"
-                      >
-                        GitHub
-                      </a>
-                    )}
-                  </div>
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="text-sm font-mono text-neutral-500 font-medium">
+                    {project.year}
+                  </span>
+                  <span className="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200/70 rounded-full px-3 py-1">
+                    {project.award}
+                  </span>
                 </div>
+                <span className="font-hand text-xl text-blue-600">
+                  {project.note}
+                </span>
+              </div>
 
-                {/* Right: Clean Image Preview Slot */}
-                <div className="lg:col-span-5">
-                  <div className="border-2 border-dashed border-neutral-300 rounded-xl bg-neutral-50 aspect-[16/11] flex flex-col items-center justify-center p-6 text-center">
-                    <div className="text-xs font-medium text-neutral-700 mb-1">
-                      {project.imageSlot}
-                    </div>
-                    <div className="text-[11px] text-neutral-500">
-                      UI demo, diagram or screenshot slot
-                    </div>
-                    <span className="font-hand text-base text-blue-600 mt-2">
-                      ready for asset
-                    </span>
-                  </div>
-                </div>
+              <div>
+                <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 tracking-tight mb-2">
+                  {project.name}
+                </h3>
+
+                <p className="text-base font-semibold text-neutral-600 leading-snug">
+                  {project.tagline}
+                </p>
+              </div>
+
+              <p className="text-base sm:text-lg text-neutral-700 leading-relaxed max-w-4xl">
+                {project.desc}
+              </p>
+
+              {/* Stack Badges (Soft Pills) */}
+              <div className="flex flex-wrap gap-2 pt-1">
+                {project.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-xs sm:text-sm font-medium bg-neutral-100 text-neutral-700 rounded-lg px-3 py-1"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap items-center gap-4 pt-3 border-t border-neutral-100">
+                {project.isAnchor ? (
+                  <a
+                    href={`#${project.slug}`}
+                    className="inline-flex items-center text-sm sm:text-base font-medium bg-neutral-900 text-white px-6 py-2.5 rounded-xl hover:bg-neutral-800 transition-all shadow-xs"
+                  >
+                    Read Research Details →
+                  </a>
+                ) : (
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    className="inline-flex items-center text-sm sm:text-base font-medium bg-neutral-900 text-white px-6 py-2.5 rounded-xl hover:bg-neutral-800 transition-all shadow-xs"
+                  >
+                    Project Case Study →
+                  </Link>
+                )}
+
+                {project.codeLink !== "#" && (
+                  <a
+                    href={project.codeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-sm sm:text-base font-medium bg-white text-neutral-800 border border-neutral-300 px-5 py-2.5 rounded-xl hover:border-neutral-900 hover:text-neutral-900 transition-all shadow-xs"
+                  >
+                    GitHub Repository
+                  </a>
+                )}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Archive List */}
-        <div className="border-t border-neutral-200 pt-8">
-          <div className="flex items-center justify-between mb-6">
-            <h4 className="text-sm font-semibold text-neutral-700">
-              Additional Systems & Archive
-            </h4>
-            <span className="text-xs text-neutral-500 font-mono">
+        {/* Additional Systems & Archive (Refined, Non-AI Directory) */}
+        <div className="border-t border-neutral-200 pt-10">
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-8">
+            <div>
+              <h3 className="text-xl sm:text-2xl font-bold text-neutral-900">
+                Additional Systems & Technical Archive
+              </h3>
+              <p className="text-sm text-neutral-500 mt-1">
+                Exploratory systems, hackathon builds, and embedded prototypes
+              </p>
+            </div>
+            <span className="text-sm font-mono text-neutral-400 font-medium">
               {OTHER_PROJECTS.length} Systems
             </span>
           </div>
 
-          <div className="divide-y divide-neutral-200 border-t border-neutral-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {OTHER_PROJECTS.map((project) => (
               <div
                 key={project.name}
-                className="py-3.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 hover:bg-neutral-50/80 px-2 rounded-lg transition-colors"
+                className="border border-neutral-200 rounded-xl bg-white p-5 flex flex-col justify-between hover:border-neutral-300 transition-all shadow-xs"
               >
-                <div className="flex items-baseline gap-3">
-                  <span className="font-mono text-xs text-neutral-400 w-12 shrink-0">
-                    {project.year}
-                  </span>
-                  <div>
-                    <span className="font-semibold text-sm text-neutral-900 mr-2">
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-sm font-bold text-neutral-900">
                       {project.name}
                     </span>
-                    {project.award && (
-                      <span className="text-[11px] bg-neutral-100 text-neutral-600 rounded-sm px-2 py-0.5 mr-2">
-                        {project.award}
-                      </span>
-                    )}
-                    <span className="text-xs text-neutral-600">
-                      : {project.desc}
+                    <span className="text-xs font-mono text-neutral-400">
+                      {project.year}
                     </span>
                   </div>
+
+                  {project.context && (
+                    <span className="inline-block text-xs font-medium text-neutral-500 bg-neutral-100 rounded-md px-2 py-0.5 mb-2.5">
+                      {project.context}
+                    </span>
+                  )}
+
+                  <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                    {project.desc}
+                  </p>
                 </div>
 
-                <div className="flex items-center gap-4 shrink-0 text-xs font-medium">
-                  <Link
-                    href={`/projects/${project.slug}`}
-                    className="text-neutral-900 hover:text-blue-600 underline underline-offset-2"
-                  >
-                    Details
-                  </Link>
+                <div className="flex items-center justify-between gap-3 pt-3 border-t border-neutral-100 mt-auto">
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.stack.map((t) => (
+                      <span
+                        key={t}
+                        className="text-xs font-medium bg-neutral-50 text-neutral-600 rounded px-2 py-0.5 border border-neutral-100"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
                   {project.codeLink !== "#" && (
                     <a
                       href={project.codeLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-neutral-500 hover:text-neutral-900 underline underline-offset-2"
+                      className="text-xs font-medium text-neutral-900 hover:text-blue-700 underline underline-offset-4 shrink-0 transition-colors"
                     >
-                      GitHub
+                      GitHub →
                     </a>
                   )}
                 </div>

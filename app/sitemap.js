@@ -4,14 +4,6 @@ export default function sitemap() {
   const projectRoutes = [
     "/projects/shatru",
     "/projects/gani",
-    "/projects/ecoai",
-    "/projects/glider",
-    "/projects/nerobot",
-    "/projects/password-manager",
-    "/projects/pcfr",
-    "/projects/rock-paper-and-scissor",
-    "/projects/studyai",
-    "/projects/unitech",
   ];
 
   const now = new Date();

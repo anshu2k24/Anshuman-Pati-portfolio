@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Navigation({ isMenuOpen, setIsMenuOpen }) {
   const navItems = [
     { label: "About", href: "/#about" },
-    { label: "Work", href: "/#work" },
     { label: "Experience", href: "/#experience" },
+    { label: "Work", href: "/#work" },
     { label: "Research", href: "/#writing" },
     { label: "Talks", href: "/#talks" },
     { label: "Contact", href: "/#contact" },

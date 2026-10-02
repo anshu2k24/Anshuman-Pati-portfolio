@@ -72,47 +72,47 @@ export default function Contact() {
         {/* Section Header */}
         <div className="flex items-baseline justify-between border-b border-neutral-200 pb-4 mb-12">
           <div className="flex items-center gap-3">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900">
               Get in Touch
             </h2>
-            <span className="font-hand text-xl text-blue-600">
+            <span className="font-hand text-2xl text-blue-600">
               say hello or propose a project
             </span>
           </div>
-          <span className="text-xs font-mono text-neutral-400">Contact</span>
+          <span className="text-sm font-mono text-neutral-400">Contact</span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Direct Channels & Info */}
           <div className="lg:col-span-5 space-y-6">
-            <p className="text-base sm:text-lg text-neutral-700 leading-relaxed">
+            <p className="text-lg sm:text-xl text-neutral-700 leading-relaxed">
               I am open to discussions on machine learning research, software engineering roles,
               and applied systems engineering.
             </p>
 
-            <div className="border border-neutral-200 rounded-2xl bg-white p-6 shadow-xs space-y-4">
-              <span className="text-xs font-mono uppercase tracking-wider text-neutral-500 block">
+            <div className="border border-neutral-200 rounded-2xl bg-white p-6 sm:p-7 shadow-xs space-y-5">
+              <span className="text-xs font-mono uppercase tracking-wider text-neutral-500 block font-medium">
                 Direct Channels
               </span>
 
               <div>
-                <span className="text-xs text-neutral-500 block mb-0.5">Email</span>
+                <span className="text-xs text-neutral-500 block mb-1">Email</span>
                 <a
                   href="mailto:anshu799pati@gmail.com"
-                  className="text-sm font-semibold text-neutral-900 hover:text-blue-600 transition-colors"
+                  className="text-base font-semibold text-neutral-900 hover:text-blue-600 transition-colors"
                 >
                   anshu799pati@gmail.com
                 </a>
               </div>
 
-              <div className="pt-3 border-t border-neutral-100 flex gap-4 text-xs font-medium">
+              <div className="pt-4 border-t border-neutral-100 flex gap-5 text-sm font-medium">
                 <a
                   href="https://github.com/anshu2k24"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-neutral-700 hover:text-neutral-900 underline underline-offset-4"
                 >
-                  GitHub
+                  GitHub →
                 </a>
                 <a
                   href="https://www.linkedin.com/in/anshu2k24"
@@ -120,13 +120,9 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="text-neutral-700 hover:text-neutral-900 underline underline-offset-4"
                 >
-                  LinkedIn
+                  LinkedIn →
                 </a>
               </div>
-            </div>
-
-            <div className="p-4 border border-neutral-200 rounded-xl bg-white text-xs font-mono text-neutral-500">
-              <span className="text-neutral-900 font-semibold">Location:</span> Bengaluru, Karnataka, India (IST)
             </div>
           </div>
 
@@ -137,10 +133,10 @@ export default function Contact() {
               className="border border-neutral-200 rounded-2xl bg-white p-6 sm:p-8 shadow-xs space-y-5"
             >
               <div className="flex items-center justify-between border-b border-neutral-100 pb-3 mb-2">
-                <span className="text-xs font-mono uppercase tracking-wider text-neutral-500">
+                <span className="text-xs font-mono uppercase tracking-wider text-neutral-500 font-medium">
                   Send a Direct Message
                 </span>
-                <span className="font-hand text-base text-blue-600">
+                <span className="font-hand text-lg text-blue-600">
                   reply within 24 hours
                 </span>
               </div>
@@ -160,7 +156,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-neutral-700 mb-1.5">
+                <label className="block text-sm font-medium text-neutral-700 mb-1.5">
                   Name
                 </label>
                 <input
@@ -171,13 +167,13 @@ export default function Contact() {
                   onChange={(e) =>
                     setContactForm({ ...contactForm, name: e.target.value })
                   }
-                  className="w-full bg-[#FAFAF9] border border-neutral-300 rounded-lg px-4 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-900 focus:bg-white transition-all"
+                  className="w-full bg-[#FAFAF9] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-900 focus:bg-white transition-all"
                   placeholder="Your name"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-neutral-700 mb-1.5">
+                <label className="block text-sm font-medium text-neutral-700 mb-1.5">
                   Email
                 </label>
                 <input
@@ -188,13 +184,13 @@ export default function Contact() {
                   onChange={(e) =>
                     setContactForm({ ...contactForm, email: e.target.value })
                   }
-                  className="w-full bg-[#FAFAF9] border border-neutral-300 rounded-lg px-4 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-900 focus:bg-white transition-all"
+                  className="w-full bg-[#FAFAF9] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-900 focus:bg-white transition-all"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-neutral-700 mb-1.5">
+                <label className="block text-sm font-medium text-neutral-700 mb-1.5">
                   Message
                 </label>
                 <textarea
@@ -205,7 +201,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setContactForm({ ...contactForm, msg: e.target.value })
                   }
-                  className="w-full bg-[#FAFAF9] border border-neutral-300 rounded-lg px-4 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-900 focus:bg-white resize-none transition-all"
+                  className="w-full bg-[#FAFAF9] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-900 focus:bg-white resize-none transition-all"
                   placeholder="Tell me about your project, idea, or role..."
                 />
               </div>
@@ -214,13 +210,13 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex items-center justify-center bg-neutral-900 text-white px-7 py-3 text-sm font-medium rounded-lg hover:bg-neutral-800 transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center justify-center bg-neutral-900 text-white px-8 py-3.5 text-base font-medium rounded-xl hover:bg-neutral-800 transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
 
                 {contactStatus && (
-                  <span className="text-xs font-medium text-blue-700">
+                  <span className="text-sm font-medium text-blue-700">
                     {contactStatus}
                   </span>
                 )}

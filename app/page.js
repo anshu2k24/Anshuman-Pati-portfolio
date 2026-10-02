@@ -20,8 +20,8 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Projects />
         <Experience />
+        <Projects />
         <Publications />
         <Talks />
         <Contact />

@@ -35,6 +35,15 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/projects/:slug(ecoai|glider|nerobot|password-manager|pcfr|rock-paper-and-scissor|studyai|unitech)",
+        destination: "/#work",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
