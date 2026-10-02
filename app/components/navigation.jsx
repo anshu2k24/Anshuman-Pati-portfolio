@@ -14,11 +14,11 @@ export default function Navigation({ isMenuOpen, setIsMenuOpen }) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center py-4">
                         <div className="text-xl sm:text-2xl font-bold">
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-purple-700 to-pink-700 drop-shadow-[0_0_8px_rgba(79,70,229,0.3)]">
+                            <span className="text-[#0F0F0F]">
                                 <span className="hidden sm:inline">
-                                    code Anshu()&#123;...&#125;
+                                    Anshuman Pati
                                 </span>
-                                <span className="sm:hidden">Anshu</span>
+                                <span className="sm:hidden">Anshuman Pati</span>
                             </span>
                         </div>
 

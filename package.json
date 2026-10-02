@@ -9,15 +9,16 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^2.2.0",
     "@splinetool/react-spline": "^4.1.0",
     "dotenv": "^16.6.1",
     "lucide-react": "^0.545.0",
     "mongoose": "^8.19.1",
     "next": "15.5.9",
-    "nodemailer": "^6.10.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "resend": "^6.32.0",
     "sharp": "^0.34.4"
   },
   "devDependencies": {
@@ -26,5 +27,6 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
     "tailwindcss": "^4"
-  }
+  },
+  "type": "module"
 }

@@ -11,16 +11,18 @@ import Experience from "./components/Experience";
 import Publications from "./components/Publications";
 import Honors from "./components/Honors";
 import Leadership from "./components/Leadership";
+import About from "./components/About";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-800">
+    <div className="min-h-screen bg-white text-[#111111]">
       
       <Hero />
+      <About />
       <Experience />
-      <TechStack />
       <Projects />
       <Publications />
+      <TechStack />
       <Honors />
       <Hackathons />
       <Leadership />

@@ -52,7 +52,7 @@ export default function Socials() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/30 to-transparent"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+          <span className="text-[#0F0F0F]">
             Let&apos;s Connect
           </span>
         </h2>
@@ -63,11 +63,9 @@ export default function Socials() {
               key={index}
               href={social.url}
               title={social.name}
-              className={`group relative bg-white hover:shadow-2xl p-3 rounded-2xl transition-all duration-500 transform hover:scale-110 border-2 border-gray-200 hover:border-transparent ${social.color} overflow-hidden`}
+              className="group relative bg-white shadow-xs p-3 rounded-3xl transition-colors border border-[#F0F0F0] hover:border-[#EDEDED] overflow-hidden"
             >
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${social.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-              ></div>
+              <div className="absolute inset-0 bg-[#7FAFBF] opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
               <span className="relative text-4xl group-hover:scale-125 transition-transform duration-500 inline-block">
                 {social.icon}
               </span>
