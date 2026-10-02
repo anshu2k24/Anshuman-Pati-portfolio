@@ -4,10 +4,15 @@ import { useState } from "react";
 import Navigation from "./components/navigation";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Projects from "./components/Projects";
 import Experience from "./components/Experience";
+import TechStack from "./components/TechStack";
+import Projects from "./components/Projects";
 import Publications from "./components/Publications";
 import Talks from "./components/Talks";
+import Honors from "./components/Honors";
+import Hackathons from "./components/Hackathons";
+import Leadership from "./components/Leadership";
+import Socials from "./components/Socials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -21,9 +26,14 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
+        <TechStack />
         <Projects />
         <Publications />
         <Talks />
+        <Honors />
+        <Hackathons />
+        <Leadership />
+        <Socials />
         <Contact />
       </main>
       <Footer />
