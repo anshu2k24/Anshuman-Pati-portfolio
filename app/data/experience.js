@@ -12,5 +12,19 @@ export const experience = [
       "Built a Supabase cloud logging backend storing event type, anomaly score, camera ID, timestamp, and snapshot per incident, enabling post-event forensic review.",
       "Authored and published research at IEEE TEMSCON-ASPAC 2026 as primary author."
     ]
+  },
+  {
+    company: "Archscale Guild",
+    role: "Freelance AI Engineer",
+    duration: "Jul 2026 – Aug 2026",
+    location: "Remote",
+    type: "Freelance",
+    tech: ["n8n", "Custom RAG", "Supabase", "PostgreSQL", "Google Cloud", "WhatsApp API", "Intelligent Agents"],
+    bullets: [
+      "Built n8n AI agent automations with WhatsApp integration for streamlined workflows.",
+      "Developed custom Supabase/PostgreSQL RAG pipeline for intelligent information retrieval.",
+      "Implemented voice-command AI navigation capabilities.",
+      "Designed and deployed GCP cloud backend infrastructure."
+    ]
   }
 ];
