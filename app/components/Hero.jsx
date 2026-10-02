@@ -487,7 +487,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-6 items-center justify-center mb-12">
               <a
                 ref={buttonRef}
-                href="https://drive.google.com/file/d/1RnIqBVgZVwdggW-F7mnALrOVZWzNRGnX/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1pSNvC8wb6eBipCeX4HWb0emujOtJHFFa/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-blue-700 to-purple-700 text-white font-extrabold text-lg rounded-xl shadow-xl hover:shadow-2xl hover:shadow-purple-700/50 transition-all duration-300 transform"
@@ -550,11 +550,12 @@ export default function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
               {[
-                { number: "10+", label: "Projects" },
+                { number: "12+", label: "Projects" },
                 { number: "6+", label: "Hackathons" },
                 { number: "18+", label: "Technologies" },
+                { number: "9.8", label: "GPA (DSCE)" },
               ].map((stat, index) => (
                 <div
                   key={index}
