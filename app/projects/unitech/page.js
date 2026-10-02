@@ -32,7 +32,7 @@ export default function UniTechPage() {
     {
       name: "Anshuman Pati",
       github: "https://github.com/anshu2k24",
-      linkedin: "https://www.linkedin.com/in/anshuman-pati-5575bb34a/",
+      linkedin: "https://www.linkedin.com/in/anshu2k24",
       role: "Project Lead",
     },
     {
@@ -85,8 +85,8 @@ export default function UniTechPage() {
 
   return (
     <div className="bg-white text-slate-800">
-      {/* Navigation - Dark Nav remains for contrast */}
-      <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} className="bg-slate-900"/>
+      {/* Navigation */}
+      <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
       {/* Hero Section - Light Themed */}
       <section className="pt-32 pb-24 sm:pt-40 sm:pb-32 text-center relative overflow-hidden bg-white">

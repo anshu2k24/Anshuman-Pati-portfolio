@@ -41,14 +41,14 @@ export default function Socials() {
           ></path>
         </svg>
       ),
-      url: "https://www.linkedin.com/in/anshuman-pati-5575bb34a/",
+      url: "https://www.linkedin.com/in/anshu2k24",
       color: "hover:bg-blue-600 hover:text-white",
       gradient: "from-blue-50 to-blue-100",
     },
   ];
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section id="socials" className="py-24 bg-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/30 to-transparent"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
@@ -63,6 +63,9 @@ export default function Socials() {
               key={index}
               href={social.url}
               title={social.name}
+              aria-label={social.name}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative bg-white shadow-xs p-3 rounded-3xl transition-colors border border-[#F0F0F0] hover:border-[#EDEDED] overflow-hidden"
             >
               <div className="absolute inset-0 bg-[#7FAFBF] opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>

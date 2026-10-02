@@ -16,7 +16,6 @@ export default function Publications() {
 
   return (
     <section id="publications" className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-20 right-0 w-72 h-72 hidden"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-extrabold mb-4">
@@ -34,7 +33,7 @@ export default function Publications() {
               key={index}
               className="group relative bg-white p-0 hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] border border-gray-200/50 overflow-hidden"
             >
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#111111] h-px"></div>
+              <div className="absolute top-0 left-0 right-0 h-1 bg-[#111111]"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-pink-400 to-purple-500 opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
               <div className="relative p-6 sm:p-8">
                 <div className="flex items-start justify-between gap-4 mb-4">

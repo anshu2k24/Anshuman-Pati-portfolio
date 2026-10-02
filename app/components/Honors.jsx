@@ -60,8 +60,6 @@ export default function Honors() {
 
   return (
     <section id="honors" className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-96 h-96 hidden"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 hidden"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-extrabold mb-4">
@@ -79,7 +77,7 @@ export default function Honors() {
               key={index}
               className="group relative bg-white p-0 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-gray-200/50 overflow-hidden"
             >
-              <div className={`absolute top-0 left-0 right-0 h-1 bg-[#111111] h-px ${honor.color}`}></div>
+              <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${honor.color}`}></div>
               <div className={`absolute inset-0 bg-gradient-to-br ${honor.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
               <div className="relative p-6">
                 <div className="flex items-start justify-between mb-4">

@@ -33,7 +33,7 @@ const contributors = [
   {
     name: "Anshuman Pati",
     github: "https://github.com/anshu2k24",
-    linkedin: "https://www.linkedin.com/in/anshuman-pati-5575bb34a/",
+    linkedin: "https://www.linkedin.com/in/anshu2k24",
     role: "Python Developer",
   },
   {

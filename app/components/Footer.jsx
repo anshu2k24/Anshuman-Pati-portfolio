@@ -9,7 +9,7 @@ export default function Footer() {
             <p className="text-2xl font-bold text-[#0F0F0F] mb-2">Just Anshu 😎</p>
           </div>
           <div className="w-24 h-1 bg-[#7FAFBF] mx-auto mb-6 rounded-full"></div>
-          <p className="text-[#5F5F5F] text-sm">© 2025 All rights reserved.</p>
+          <p className="text-[#5F5F5F] text-sm">© {new Date().getFullYear()} Anshuman Pati. All rights reserved.</p>
         </div>
       </div>
     </footer>

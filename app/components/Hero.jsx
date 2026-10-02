@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import profilePic from "./me.jpg";
+import profilePic from "./me.webp";
 import Navigation from "./navigation";
 
 export default function Hero() {

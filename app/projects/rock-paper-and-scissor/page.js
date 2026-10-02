@@ -17,7 +17,7 @@ export default function RockPaperScissorsPage() {
   const contributor = {
     name: "Anshuman Pati",
     github: "https://github.com/anshu2k24/rock-paper-scissors",
-    linkedin: "https://www.linkedin.com/in/anshuman-pati-5575bb34a/",
+    linkedin: "https://www.linkedin.com/in/anshu2k24",
     role: "Developer & Computer Vision Engineer",
   };
 

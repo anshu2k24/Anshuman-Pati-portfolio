@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Navigation from "../../components/navigation";
 
 import {
@@ -30,7 +30,7 @@ const contributors = [
   {
     name: "Anshuman Pati",
     github: "https://github.com/anshu2k24",
-    linkedin: "https://www.linkedin.com/in/anshuman-pati-5575bb34a/",
+    linkedin: "https://www.linkedin.com/in/anshu2k24",
   },
   {
     name: "Midde Jayanth",
@@ -116,10 +116,12 @@ const ContributorCard = ({ member, isHighlighted }) => {
 
 // --- Main Page Component ---
 export default function PCFRDemoPage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="bg-white text-slate-800 font-sans min-h-screen">
-      {/* Navigation Placeholder */}
-      <Navigation />
+      {/* Navigation */}
+      <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       {/* Hero Section (FIXED) */}
       <section
         id="hero"

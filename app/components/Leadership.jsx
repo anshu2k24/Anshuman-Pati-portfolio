@@ -23,8 +23,6 @@ export default function Leadership() {
 
   return (
     <section id="leadership" className="py-24 bg-white">
-      <div className="absolute top-0 left-0 w-96 h-96 hidden"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 hidden"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-extrabold mb-4">
